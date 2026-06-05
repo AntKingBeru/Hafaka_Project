@@ -1,280 +1,216 @@
-using System;
-using System.Numerics;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using Vector2 = UnityEngine.Vector2;
-using Vector3 = UnityEngine.Vector3;
 
-public class PlayerController : MonoBehaviour
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Collider))]
+public class PlayerController : MonoBehaviour, IDamageable
 {
-    [Header("References")]
-    [SerializeField] private CharacterController controller;
-    [SerializeField] private Transform grappleAnchorRoot;
-    [SerializeField] private LineRenderer grappleLine;
-    [SerializeField] private Camera mainCamera;
-    
-    [Header("Input")]
-    [SerializeField] private InputActionReference moveAction;
-    [SerializeField] private InputActionReference jumpAction;
-    [SerializeField] private InputActionReference primaryAction;
-    [SerializeField] private InputActionReference secondaryAction;
-    [SerializeField] private InputActionReference dashAction;
-    
-    [Header("Movement")]
-    [SerializeField] private float moveSpeed = 7f;
-    [SerializeField] private float gravity = 9.81f;
-    
-    [Header("Jump")]
-    [SerializeField] private int maxJumps = 2;
-    [SerializeField] private float jumpHeight = 3.5f;
-    
-    [Header("Dash")]
-    [SerializeField] private float dashSpeed = 20f;
-    [SerializeField] private float dashDuration = 0.15f;
-    [SerializeField] private float dashCooldown = 0.8f;
-    
-    [Header("Grapple")]
-    [SerializeField] private float grappleSpeed = 18f;
-    [SerializeField] private float grappleRadius = 12f;
-    [SerializeField] private float grappleStopDistance = 0.6f;
+    [Header("Movement Settings")]
+    [SerializeField] private float maxMoveSpeed = 8f;
+    [SerializeField] private float accelerationFactor = 10f;
+    [SerializeField] private float decelerationFactor = 15f;
+    [SerializeField] private float jumpForce = 14f;
+    [SerializeField] private float fallGravityMultiplier = 2.5f;
+    [SerializeField] private float coyoteTime = 0.12f;
 
-    private Vector3 _velocity;
-    private int _jumpsRemaining;
-    private bool _isDashing;
-    private float _dashTimer;
-    private float _dashCooldownTimer;
-    private float _dashDirection;
-    private bool _isGrappling;
-    private Transform _grappleTarget;
+    [Header("Ground Check Settings")]
+    [SerializeField] private Vector3 groundCheckOrigin = new(0f, 0.05f, 0f);
+    [SerializeField] private float groundCheckDistance = 0.15f;
+    [SerializeField] private float groundCheckRadius = 0.25f;
+    [SerializeField] private LayerMask groundLayer;
+
+    [Header("Input Actions")] [SerializeField]
+    private InputActionReference moveAction;
+
+    [SerializeField] private InputActionReference jumpAction;
+    [SerializeField] private InputActionReference active1Action;
+    [SerializeField] private InputActionReference active2Action;
+    [SerializeField] private InputActionReference formMeleeAction;
+    [SerializeField] private InputActionReference formRangedAction;
+    [SerializeField] private InputActionReference formTraversalAction;
+
+    [Header("References")]
+    [SerializeField] private Transform visualRoot;
+    [SerializeField] private Rigidbody rb;
+    [SerializeField] private Collider col;
+    
+    public Rigidbody Rb => rb;
+    public bool IsGrounded { get; private set; }
+    public int FacingDirection { get; private set; } = 1;
+    public int BaseJumpCharges { get; private set; } = 1;
+    public int RemainingJumpCharges { get; private set; }
+
+    private float _lastGroundedTime;
+    private bool _jumpConsumed;
+    private bool _wasGroundedLastFrame;
 
     private void Awake()
     {
-        if (!mainCamera)
-            mainCamera = Camera.main;
+        RemainingJumpCharges = BaseJumpCharges;
+    }
+
+    private void Start()
+    {
+        FormManager.Instance.Initialize(this);
     }
 
     private void OnEnable()
     {
         moveAction.action.Enable();
         jumpAction.action.Enable();
-        primaryAction.action.Enable();
-        secondaryAction.action.Enable();
-        dashAction.action.Enable();
-        
-        jumpAction.action.performed += OnJump;
-        primaryAction.action.performed += OnAttack;
-        secondaryAction.action.performed += OnGrappleStart;
-        secondaryAction.action.canceled += OnGrappleCancel;
-        dashAction.action.performed += OnDash;
+        active1Action.action.Enable();
+        active2Action.action.Enable();
+        formMeleeAction.action.Enable();
+        formRangedAction.action.Enable();
+        formTraversalAction.action.Enable();
+
+        jumpAction.action.performed += OnJumpPerformed;
+        active1Action.action.performed += OnActive1Performed;
+        active2Action.action.performed += OnActive2Performed;
+        formMeleeAction.action.performed += _ => FormManager.Instance.SwitchToForm(0);
+        formRangedAction.action.performed += _ => FormManager.Instance.SwitchToForm(1);
+        formTraversalAction.action.performed += _ => FormManager.Instance.SwitchToForm(2);
     }
 
     private void OnDisable()
     {
-        jumpAction.action.performed -= OnJump;
-        primaryAction.action.performed -= OnAttack;
-        secondaryAction.action.performed -= OnGrappleStart;
-        secondaryAction.action.canceled -= OnGrappleCancel;
-        dashAction.action.performed -= OnDash;
-        
+        jumpAction.action.performed -= OnJumpPerformed;
+        active1Action.action.performed -= OnActive1Performed;
+        active2Action.action.performed -= OnActive2Performed;
+
         moveAction.action.Disable();
         jumpAction.action.Disable();
-        primaryAction.action.Disable();
-        secondaryAction.action.Disable();
-        dashAction.action.Disable();
+        active1Action.action.Disable();
+        active2Action.action.Disable();
+        formMeleeAction.action.Disable();
+        formRangedAction.action.Disable();
+        formTraversalAction.action.Disable();
     }
 
     private void Update()
     {
-        if (_dashCooldownTimer > 0f)
-        {
-            _dashCooldownTimer -= Time.deltaTime;
-        }
+        UpdateGrounded();
+        HandleFlip();
+        FormManager.Instance.OnUpdate();
+    }
 
-        if (_isDashing)
-        {
-            HandleDash();
-            return;
-        }
-
-        if (_isGrappling)
-        {
-            HandleGrapple();
-            return;
-        }
-
+    private void FixedUpdate()
+    {
         HandleMovement();
-        UpdateGrappleLine();
+        HandleFallGravity();
+        FormManager.Instance.OnFixedUpdate();
+    }
+
+    private void UpdateGrounded()
+    {
+        var groundedThisFrame = Physics.SphereCast(
+            transform.position + groundCheckOrigin,
+            groundCheckRadius,
+            Vector3.down,
+            out _,
+            groundCheckDistance,
+            groundLayer,
+            QueryTriggerInteraction.Ignore
+        );
+        
+        if (groundedThisFrame && !_wasGroundedLastFrame)
+            ResetJumpCharges();
+
+        if (groundedThisFrame)
+            _lastGroundedTime = Time.time;
+        
+        IsGrounded = groundedThisFrame;
+        _wasGroundedLastFrame = groundedThisFrame;
     }
 
     private void HandleMovement()
     {
-        var grounded = controller.isGrounded;
+        var input = moveAction.action.ReadValue<Vector2>().x;
+        var targetX = input * maxMoveSpeed * FormManager.Instance.CurrentForm.GetSpeedMultiplier();
 
-        if (grounded && _velocity.y < 0f)
-        {
-            _velocity.y = -2f;
-            _jumpsRemaining = maxJumps;
-        }
-        
-        var horizontal = moveAction.action.ReadValue<Vector2>().x;
-        _velocity.x = horizontal * moveSpeed;
-        
-        _velocity.y += gravity * Time.deltaTime;
+        var currentX = Rb.linearVelocity.x;
+        var factor = (Mathf.Abs(input) > 0.01f) ? accelerationFactor : decelerationFactor;
+        var newX = Mathf.MoveTowards(currentX, targetX, factor * Time.fixedDeltaTime);
 
-        _velocity.z = 0f;
-        
-        controller.Move(_velocity * Time.deltaTime);
-
-        if (horizontal != 0f)
-            transform.localScale = new Vector3(Mathf.Sign(horizontal), 1f, 1f);
+        Rb.linearVelocity = new Vector3(newX, Rb.linearVelocity.y, 0f);
     }
 
-    private void OnJump(InputAction.CallbackContext context)
+    private void HandleFallGravity()
     {
-        if (_isDashing || _isGrappling)
-            return;
-
-        if (_jumpsRemaining > 0)
+        if (rb.linearVelocity.y < 0f)
         {
-            _velocity.y = Mathf.Sqrt(2f * Mathf.Abs(gravity) * jumpHeight);
-            _jumpsRemaining--;
+            rb.linearVelocity += Vector3.up
+                                 * Physics.gravity.y
+                                 * (fallGravityMultiplier - 1f)
+                                 * Time.fixedDeltaTime;
         }
     }
 
-    private void OnDash(InputAction.CallbackContext context)
+    private void HandleFlip()
     {
-        if (_isDashing || _dashCooldownTimer > 0f || _isGrappling)
+        var input = moveAction.action.ReadValue<Vector2>().x;
+
+        if (input > 0.1f && FacingDirection != 1)
+            SetFacing(1);
+        else if (input < -0.1f && FacingDirection != -1)
+            SetFacing(-1);
+    }
+
+    private void SetFacing(int dir)
+    {
+        FacingDirection = dir;
+        var scale = visualRoot.localScale;
+        scale.x = Mathf.Abs(scale.x) * dir;
+        visualRoot.localScale = scale;
+    }
+
+    private void OnJumpPerformed(InputAction.CallbackContext ctx)
+    {
+        var withinCoyoteWindow = (Time.time - _lastGroundedTime) <= coyoteTime;
+        var canGroundJump = (IsGrounded || withinCoyoteWindow) && RemainingJumpCharges > 0;
+        var totalCharges = BaseJumpCharges + FormManager.Instance.CurrentForm.GetExtraJumpCharges();
+        var canAirJump = !IsGrounded && !withinCoyoteWindow
+                                     && RemainingJumpCharges > 0
+                                     && RemainingJumpCharges < totalCharges;
+        if (!canGroundJump && !canAirJump)
             return;
         
-        var horizontal = moveAction.action.ReadValue<Vector2>().x;
-        _dashDirection = horizontal != 0f ? Mathf.Sign(horizontal) : Mathf.Sign(transform.localScale.x);
-
-        _isDashing = true;
-        _dashTimer = dashDuration;
-        _velocity.y = 0f;
+        _lastGroundedTime = -999f;
+        RemainingJumpCharges--;
+        rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, 0f);
+        FormManager.Instance.CurrentForm.OnAnyAbilityUsed();
     }
+
+    private void ResetJumpCharges()
+    {
+        RemainingJumpCharges = BaseJumpCharges + FormManager.Instance.CurrentForm.GetExtraJumpCharges();
+    }
+
+    private void OnActive1Performed(InputAction.CallbackContext ctx) => FormManager.Instance.OnActive1Pressed();
     
-    private void HandleDash()
+    private void OnActive2Performed(InputAction.CallbackContext ctx) => FormManager.Instance.OnActive2Pressed();
+
+    public void TakeDamage(float amount)
     {
-        _dashTimer -= Time.deltaTime;
-
-        var dashVelocity = new Vector3(_dashDirection * dashSpeed, 0f, 0f);
-        controller.Move(dashVelocity * Time.deltaTime);
-
-        if (_dashTimer <= 0f)
-        {
-            _isDashing = false;
-            _dashCooldownTimer = dashCooldown;
-            _velocity.x = _dashDirection * moveSpeed;
-        }
+        var reduced = amount * FormManager.Instance.CurrentForm.GetDamageMultiplier();
+        // TODO: hook into health system; log for now
+        Debug.Log($"[Player] Took {reduced} damage (raw: {amount})");
     }
 
-    private void OnAttack(InputAction.CallbackContext context)
+    private void OnDrawGizmosSelected()
     {
-        //TODO: add attack logic
-    }
-
-    private void OnGrappleStart(InputAction.CallbackContext context)
-    {
-        if (_isGrappling || _isDashing)
-            return;
-
-        var best = FindClosestGrapplePoint();
-        if (!best)
-            return;
-
-        _grappleTarget = best;
-        _isGrappling = true;
-        _velocity = Vector3.zero;
-
-        if (grappleLine)
-        {
-            grappleLine.enabled = true;
-            grappleLine.positionCount = 2;
-        }
-    }
-
-    private void OnGrappleCancel(InputAction.CallbackContext context)
-    {
-        StopGrapple();
-    }
-
-    private void HandleGrapple()
-    {
-        if (!_grappleTarget)
-        {
-            StopGrapple();
-            return;
-        }
-        
-        var direction = _grappleTarget.localPosition - transform.position;
-        direction.z = 0f;
-
-        if (direction.magnitude <= grappleStopDistance)
-        {
-            StopGrapple();
-            return;
-        }
-        
-        controller.Move(direction.normalized * (grappleSpeed * Time.deltaTime));
-        UpdateGrappleLine();
-    }
-
-    private void StopGrapple()
-    {
-        _isGrappling = false;
-        _grappleTarget = null;
-        _jumpsRemaining = maxJumps;
-        
-        if (grappleLine)
-            grappleLine.enabled = false;
-    }
-
-    private Transform FindClosestGrapplePoint()
-    {
-        if (!grappleAnchorRoot)
-            return null;
-        
-        var mouseScreen = Mouse.current.position.ReadValue();
-        var ray = mainCamera.ScreenPointToRay(mouseScreen);
-
-        var playerZ = transform.position.z;
-        var t = (playerZ - ray.origin.z) / ray.direction.z;
-        var mouseWorld = ray.origin + ray.direction * t;
-
-        var toMouse = (mouseWorld - transform.position).normalized;
-
-        Transform best = null;
-        var bestScore = float.MinValue;
-
-        foreach (Transform point in grappleAnchorRoot)
-        {
-            var toPoint = point.position - transform.position;
-            toPoint.z = 0f;
-            
-            var distance = toPoint.magnitude;
-            if (distance > grappleRadius)
-                continue;
-            
-            var dot = Vector3.Dot(toMouse, toPoint.normalized);
-            var score = dot - (distance / grappleRadius) * 0.3f;
-
-            if (score > bestScore)
-            {
-                bestScore = score;
-                best = point;
-            }
-        }
-
-        return best;
-    }
-
-    private void UpdateGrappleLine()
-    {
-        if (!grappleLine || !grappleLine.enabled)
-            return;
-        
-        grappleLine.SetPosition(0, transform.position);
-        grappleLine.SetPosition(1, _grappleTarget ? _grappleTarget.position : transform.position);
+        Gizmos.color = IsGrounded ? Color.green : Color.red;
+        Gizmos.DrawWireSphere(transform.position + groundCheckOrigin, groundCheckRadius);
+        Gizmos.DrawWireSphere(transform.position + groundCheckOrigin + Vector3.down * groundCheckDistance, groundCheckRadius);
+        Gizmos.DrawLine(
+            transform.position + groundCheckOrigin + Vector3.left * groundCheckRadius,
+            transform.position + groundCheckOrigin + Vector3.down * groundCheckDistance +
+            Vector3.left * groundCheckRadius
+        );
+        Gizmos.DrawLine(
+            transform.position + groundCheckOrigin + Vector3.right * groundCheckRadius,
+            transform.position + groundCheckOrigin + Vector3.down * groundCheckDistance +
+            Vector3.right * groundCheckRadius
+        );
     }
 }
