@@ -32,7 +32,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -92,8 +92,624 @@ ModelImporter:
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
-    human: []
-    skeleton: []
+    human:
+    - boneName: blocking_robot_grp
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: leg_L_grp
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: leg_R_grp1
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: leg_lowerpart_l_grp
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: leg_lowerpart_R_grp
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: leg_01_geo
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: arm_main_grp
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: palm_grp
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: finger_02_geo
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: fingerpart_10_grp
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: finger_05_geo
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: fingerpart_13_grp
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: fingerpart_20_geo
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: fingerpart_04_grp
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: fingerpart_06_grp
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: fingerpart_05_grp
+      humanName: Jaw
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: fingers_grp
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: char_blocking_test_v002(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 10, y: 10, z: 10}
+    - name: blocking_robot_grp
+      parentName: char_blocking_test_v002(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: arm_l_grp
+      parentName: blocking_robot_grp
+      position: {x: 0.006741691, y: -0.096710265, z: 0.048097074}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: armL_01_geo
+      parentName: arm_l_grp
+      position: {x: 0.8334923, y: 2.0838056, z: 0.044618335}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: armL_02_geo
+      parentName: arm_l_grp
+      position: {x: -1.0297331, y: 1.7913551, z: -0.17091624}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: armL_03_geo
+      parentName: arm_l_grp
+      position: {x: 0.58267874, y: 2.1920655, z: -0.100304976}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: arm_main_grp
+      parentName: blocking_robot_grp
+      position: {x: 0.023287369, y: -0.096710265, z: 0.048097074}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: armmain_01_geo
+      parentName: arm_main_grp
+      position: {x: 1.1306556, y: 1.5977111, z: -0.20194378}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: armmain_02_geo
+      parentName: arm_main_grp
+      position: {x: 1.1988639, y: 1.5139023, z: -0.29911643}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: armmain_05_geo
+      parentName: arm_main_grp
+      position: {x: 1.2322431, y: 1.4130214, z: -0.26411924}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: armmain_08_geo
+      parentName: arm_main_grp
+      position: {x: 0.8169466, y: 2.0838056, z: 0.044618335}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: armmain_09_geo
+      parentName: arm_main_grp
+      position: {x: 0.5661331, y: 2.1920655, z: -0.100304976}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: group27
+      parentName: arm_main_grp
+      position: {x: 1.3153669, y: 1.5102243, z: -0.3395649}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: armmain_03_geo
+      parentName: group27
+      position: {x: -0.24373703, y: -0.1867761, z: 0.36818764}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: armmain_04_geo
+      parentName: group27
+      position: {x: -0.15637784, y: 0.09010812, z: 0.30382562}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: group28
+      parentName: group27
+      position: {x: -0.21218996, y: -0.9290482, z: 0.70664626}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: armmain_06_geo
+      parentName: group28
+      position: {x: 0.0021234301, y: 0.03525496, z: -0.040855553}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: armmain_07_geo
+      parentName: group28
+      position: {x: -0.011009299, y: -0.061356705, z: 0.04483765}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: palm_grp
+      parentName: arm_main_grp
+      position: {x: 1.2010124, y: 0.4712224, z: 0.5194059}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingers_grp
+      parentName: palm_grp
+      position: {x: -1.1506256, y: -0.34344172, z: -0.53942543}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: finger_01_geo
+      parentName: fingers_grp
+      position: {x: 0.97618866, y: -0.22751339, z: 0.7902894}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_01_grp
+      parentName: finger_01_geo
+      position: {x: -0.8461556, y: 0.1017761, z: -1.0047061}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_01_geo
+      parentName: fingerpart_01_grp
+      position: {x: 0.89061403, y: 0.051121026, z: 0.90146726}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_02_geo
+      parentName: fingerpart_01_grp
+      position: {x: 0.8650824, y: -0.016692875, z: 0.9403559}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_02_grp
+      parentName: finger_01_geo
+      position: {x: 0.016479306, y: 0.07250763, z: -0.055048805}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_03_geo
+      parentName: fingerpart_02_grp
+      position: {x: -0.0021907429, y: -0.06829302, z: 0.06048745}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_04_geo
+      parentName: fingerpart_02_grp
+      position: {x: -0.027722344, y: -0.13610692, z: 0.09937615}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_03_grp
+      parentName: finger_01_geo
+      position: {x: -0.016122332, y: -0.07798825, z: 0.05951456}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_05_geo
+      parentName: fingerpart_03_grp
+      position: {x: -0.0021907429, y: -0.06829302, z: 0.06048745}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: finger_02_geo
+      parentName: fingers_grp
+      position: {x: 1.0426526, y: -0.29772887, z: 0.7169649}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_04_grp
+      parentName: finger_02_geo
+      position: {x: -0.6898268, y: 0.08297278, z: -0.81908476}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_06_geo
+      parentName: fingerpart_04_grp
+      position: {x: 0.7260714, y: 0.041676324, z: 0.7349195}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_07_geo
+      parentName: fingerpart_04_grp
+      position: {x: 0.7052569, y: -0.013608836, z: 0.76662344}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_05_grp
+      parentName: finger_02_geo
+      position: {x: 0.013434725, y: 0.05911171, z: -0.044878434}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_08_geo
+      parentName: fingerpart_05_grp
+      position: {x: -0.001785999, y: -0.055675756, z: 0.049312282}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_09_geo
+      parentName: fingerpart_05_grp
+      position: {x: -0.02260059, y: -0.110960916, z: 0.08101622}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_06_grp
+      parentName: finger_02_geo
+      position: {x: -0.013143701, y: -0.063579775, z: 0.048519135}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_10_geo
+      parentName: fingerpart_06_grp
+      position: {x: -0.001785999, y: -0.055675756, z: 0.049312282}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: finger_03_geo
+      parentName: fingers_grp
+      position: {x: 0.81828547, y: 0.36550447, z: 0.711893}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_07_grp
+      parentName: finger_03_geo
+      position: {x: 0.33420512, y: -0.7510763, z: -1.2642239}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_11_geo
+      parentName: fingerpart_07_grp
+      position: {x: -0.29886943, y: 0.70314336, z: 1.2938145}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_08_grp
+      parentName: finger_03_geo
+      position: {x: 0.019939223, y: -0.055084854, z: 0.037229452}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_12_geo
+      parentName: fingerpart_08_grp
+      position: {x: -0.085493855, y: -0.030886231, z: 0.05701318}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_13_geo
+      parentName: fingerpart_08_grp
+      position: {x: -0.16626324, y: -0.07840333, z: 0.0808654}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_09_grp
+      parentName: finger_03_geo
+      position: {x: -0.16928546, y: -0.13923089, z: 0.12691928}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_14_geo
+      parentName: fingerpart_09_grp
+      position: {x: 0.01280565, y: -0.0010269573, z: -0.013075784}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: finger_04_geo
+      parentName: fingers_grp
+      position: {x: 0.89579624, y: -0.18319647, z: 0.89656985}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_10_grp
+      parentName: finger_04_geo
+      position: {x: -0.9337374, y: 0.11231049, z: -1.1086987}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_15_geo
+      parentName: fingerpart_10_grp
+      position: {x: 0.98279744, y: 0.056412335, z: 0.99477404}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_16_geo
+      parentName: fingerpart_10_grp
+      position: {x: 0.9546232, y: -0.01842068, z: 1.0376879}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_11_grp
+      parentName: finger_04_geo
+      position: {x: 0.018185006, y: 0.08001257, z: -0.06074666}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_17_geo
+      parentName: fingerpart_11_grp
+      position: {x: -0.0024174969, y: -0.07536172, z: 0.06674823}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_18_geo
+      parentName: fingerpart_11_grp
+      position: {x: -0.03059176, y: -0.15019475, z: 0.10966213}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_12_grp
+      parentName: finger_04_geo
+      position: {x: -0.017791083, y: -0.086060464, z: 0.06567465}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_19_geo
+      parentName: fingerpart_12_grp
+      position: {x: -0.0024174969, y: -0.07536172, z: 0.06674823}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: finger_05_geo
+      parentName: fingers_grp
+      position: {x: 0.82160866, y: -0.08922999, z: 0.9716627}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_13_grp
+      parentName: finger_05_geo
+      position: {x: -0.8103795, y: 0.09747293, z: -0.9622264}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_20_geo
+      parentName: fingerpart_13_grp
+      position: {x: 0.8529582, y: 0.048959594, z: 0.8633525}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_21_geo
+      parentName: fingerpart_13_grp
+      position: {x: 0.8285061, y: -0.015987089, z: 0.90059704}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_14_grp
+      parentName: finger_05_geo
+      position: {x: 0.01578255, y: 0.06944195, z: -0.0527213}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_22_geo
+      parentName: fingerpart_14_grp
+      position: {x: -0.0020981168, y: -0.06540554, z: 0.057929993}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_23_geo
+      parentName: fingerpart_14_grp
+      position: {x: -0.026550222, y: -0.13035223, z: 0.095174454}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_15_grp
+      parentName: finger_05_geo
+      position: {x: -0.015440667, y: -0.07469085, z: 0.05699824}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: fingerpart_24_geo
+      parentName: fingerpart_15_grp
+      position: {x: -0.0020981168, y: -0.06540554, z: 0.057929993}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: palm_gro
+      parentName: palm_grp
+      position: {x: -0.14679424, y: -0.17967542, z: 0.06434994}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: body_inner_grp
+      parentName: blocking_robot_grp
+      position: {x: 0.006741691, y: -0.096710265, z: 0.048097074}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: body_01_geo
+      parentName: body_inner_grp
+      position: {x: -0, y: 1.9714028, z: 0.30658635}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: body_03_geo
+      parentName: body_inner_grp
+      position: {x: -0, y: 1.3892292, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: body_04_geo
+      parentName: body_inner_grp
+      position: {x: -0, y: 1.5272901, z: 0.13168184}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: body_05_geo
+      parentName: body_inner_grp
+      position: {x: -0, y: 1.5272901, z: 0.11045849}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leg_L_grp
+      parentName: body_inner_grp
+      position: {x: -0.0075640315, y: 1.3925575, z: -0.048097074}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leg_l_01_geo
+      parentName: leg_L_grp
+      position: {x: -0.34602305, y: -0.3945403, z: -0.07458856}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leg_lowerpart_l_grp
+      parentName: leg_L_grp
+      position: {x: -0.017244447, y: -2.7444558, z: 0.090303265}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leg_01_geo
+      parentName: leg_lowerpart_l_grp
+      position: {x: -0.26924276, y: 1.5861009, z: -0.1812325}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leg_02_geo
+      parentName: leg_lowerpart_l_grp
+      position: {x: -0.23836343, y: 0.9203143, z: -0.2044489}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leg_03_geo
+      parentName: leg_lowerpart_l_grp
+      position: {x: -0.20625778, y: 0.16182683, z: -0.33286235}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leg_04_geo
+      parentName: leg_lowerpart_l_grp
+      position: {x: -0.31150028, y: 0.024467839, z: 0.09252305}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leg_05_geo
+      parentName: leg_lowerpart_l_grp
+      position: {x: -0.2326355, y: 0.43787876, z: -0.19643359}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leg_R_grp1
+      parentName: body_inner_grp
+      position: {x: -0.0075640315, y: 1.3925575, z: -0.048097074}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leg_lowerpart_R_grp
+      parentName: leg_R_grp1
+      position: {x: 0.39059678, y: -1.151838, z: -0.10846432}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leg_01_geo_R
+      parentName: leg_lowerpart_R_grp
+      position: {x: -0.104109585, y: -0.0065169977, z: 0.017535111}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leg_02_geo_R
+      parentName: leg_lowerpart_R_grp
+      position: {x: -0.13498889, y: -0.6723037, z: -0.0056812973}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leg_03_geo_R
+      parentName: leg_lowerpart_R_grp
+      position: {x: -0.16709457, y: -1.4307911, z: -0.13409474}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leg_04_geo_R
+      parentName: leg_lowerpart_R_grp
+      position: {x: -0.06185208, y: -1.56815, z: 0.29129064}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leg_05_geo_R
+      parentName: leg_lowerpart_R_grp
+      position: {x: -0.14071684, y: -1.1547393, z: 0.0023340047}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leg_R_01_geo
+      parentName: leg_R_grp1
+      position: {x: 0.34602305, y: -0.3945403, z: -0.07458856}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: head
+      parentName: blocking_robot_grp
+      position: {x: 0.006741691, y: 2.2989912, z: 0.6775112}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: plates_outside
+      parentName: blocking_robot_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: plates_01_geo
+      parentName: plates_outside
+      position: {x: 0.006741691, y: 1.3241043, z: -1.4059675}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: plates_02_geo
+      parentName: plates_outside
+      position: {x: 0.006741691, y: 1.483006, z: -0.949796}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: plates_03_geo
+      parentName: plates_outside
+      position: {x: 0.48392653, y: 1.9923689, z: -0.14656095}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: plates_04_geo
+      parentName: plates_outside
+      position: {x: -0, y: 2.2455795, z: -0.5266623}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: plates_05_geo
+      parentName: plates_outside
+      position: {x: 0.02032884, y: 1.9366554, z: 0.71825117}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: plates_06_geo
+      parentName: plates_outside
+      position: {x: 1.6247282, y: 0.8242526, z: -0.95580447}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: plates_07_geo
+      parentName: plates_outside
+      position: {x: 0.29981348, y: 1.7045373, z: 0.4600534}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: plates_08_geo
+      parentName: plates_outside
+      position: {x: 0.90434134, y: 1.619399, z: -0.85521394}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -108,9 +724,9 @@ ModelImporter:
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
