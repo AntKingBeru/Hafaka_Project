@@ -64,6 +64,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6124957515704178550, guid: 50ff6dfa1a188ab4689d7494a4f69b44, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: -6124957515704178550, guid: 50ff6dfa1a188ab4689d7494a4f69b44, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: -6124957515704178550, guid: 50ff6dfa1a188ab4689d7494a4f69b44, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 50ff6dfa1a188ab4689d7494a4f69b44, type: 3}
       propertyPath: m_Name
       value: Char_anim_blocking
