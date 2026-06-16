@@ -11,12 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8abec611-85b6-4918-a764-2fc510d87e3c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Char.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Char.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/block_floor_1_geo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/block_floor_1_geo.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/playground.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/playground.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Weapons/GrappleHook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Weapons/GrappleHook.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +172,7 @@
       <option name="presentableId" value="Default" />
       <updated>1780660273924</updated>
       <workItem from="1780660276803" duration="11600000" />
-      <workItem from="1781619250196" duration="233000" />
+      <workItem from="1781619250196" duration="666000" />
     </task>
     <servers />
   </component>

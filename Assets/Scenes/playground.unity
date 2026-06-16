@@ -11393,14 +11393,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 821988561085201463, guid: 1bcfc75a2129c824a9d02079e43298e0, type: 3}
-      propertyPath: maxRopeLength
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 821988561085201463, guid: 1bcfc75a2129c824a9d02079e43298e0, type: 3}
-      propertyPath: maxGrappleLength
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 4964481316504604323, guid: 1bcfc75a2129c824a9d02079e43298e0, type: 3}
       propertyPath: mainCamera
       value: 
