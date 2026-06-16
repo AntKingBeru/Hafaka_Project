@@ -14,6 +14,7 @@ public class GrappleHook : MonoBehaviour
     [SerializeField] private float projectileSpeed = 25f;
     [SerializeField] private float maxGrappleLength = 10f;
     [SerializeField] private float maxRopeLength = 6f;
+    [SerializeField] private float ropeOffset = 0.2f;
     [SerializeField] private LayerMask grappleTargets;
     [SerializeField] private LayerMask enemyLayer;
     [SerializeField] private LineRenderer lineRenderer;
@@ -117,7 +118,7 @@ public class GrappleHook : MonoBehaviour
         var toAnchor = _hookPosition - _player.transform.position;
         var dist = toAnchor.magnitude;
 
-        if (dist > 0.2f)
+        if (dist > ropeOffset)
         {
             var pullDir = toAnchor.normalized;
             var targetVel = pullDir * projectileSpeed;
