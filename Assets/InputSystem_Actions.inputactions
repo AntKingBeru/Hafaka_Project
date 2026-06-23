@@ -61,6 +61,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Dash",
+                    "type": "Button",
+                    "id": "b9536e20-5f70-449d-a6cf-5860737125c0",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Map",
                     "type": "Button",
                     "id": "f75829df-b57a-4206-90e3-a47589bdc93f",
@@ -337,6 +346,17 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0e660e5f-4095-4a0b-8cd6-c4bce0b67c8f",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
