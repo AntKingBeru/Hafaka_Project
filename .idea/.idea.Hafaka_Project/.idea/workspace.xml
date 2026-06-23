@@ -11,7 +11,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8abec611-85b6-4918-a764-2fc510d87e3c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/playground.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/playground.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Hafaka_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hafaka_Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Block_celling_2_geo.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Block_celling_2_geo.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Char_anim_blocking.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Char_anim_blocking.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/block_celling_1_geo.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/block_celling_1_geo.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/block_floor_1_geo.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/block_floor_1_geo.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/block_platform_1_geo.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/block_platform_1_geo.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/block_wall_1_geo.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/block_wall_1_geo.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/block_wall_2_geo.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/block_wall_2_geo.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/drone.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/drone.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/model_dump/char_blocking_Grapple.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/model_dump/char_blocking_Grapple.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/model_dump/char_blocking_magnet.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/model_dump/char_blocking_magnet.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/model_dump/char_blocking_solderingiron.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/model_dump/char_blocking_solderingiron.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/model_dump/char_blocking_test_v002.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/model_dump/char_blocking_test_v002.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/model_dump/test_char_mode2.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/model_dump/test_char_mode2.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/turret_dozer.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/turret_dozer.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interfaces/IDamageable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interfaces/IDamageable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interfaces/IHighlightable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interfaces/IHighlightable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interfaces/IInteractable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interfaces/IInteractable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/FormManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/FormManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerForms.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerForms/Melee.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerForms/Melee.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerForms/PlayerForm.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerForms/PlayerForm.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerForms/Ranged.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerForms/Ranged.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerForms/Traversal.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerForms/Traversal.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Weapons.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Weapons/GrappleHook.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Weapons/GrappleHook.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +64,7 @@
     </persistenceIdMap>
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="1" />
+    <option name="cachedIndexableFilesCount" value="7" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">
@@ -41,61 +81,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.4803911598846586" />
-      <entry key="MS500" value="2.79107685176551" />
-      <entry key="S2" value="6.007229021595326" />
-      <entry key="S5" value="8.715339814681062" />
-      <entry key="S10" value="11.398373752583167" />
-      <entry key="S30" value="21.490765109967704" />
-      <entry key="S60" value="36.72936572043194" />
-      <entry key="M2" value="57.15733501334849" />
-      <entry key="M5" value="85.65315855797367" />
-      <entry key="M10" value="114.37801814249218" />
-      <entry key="M15" value="148.41786722911564" />
-      <entry key="M30" value="336.22901991065606" />
-      <entry key="H1" value="848.9656284974398" />
-      <entry key="H2" value="1568.6216423390033" />
-      <entry key="H4" value="2200.8024532542795" />
-      <entry key="D1" value="2959.1188950003334" />
-      <entry key="W1" value="3116.812747651388" />
+      <entry key="MS100" value="1.0072893564450538" />
+      <entry key="MS500" value="1.412832733933328" />
+      <entry key="S2" value="2.4918064431337603" />
+      <entry key="S5" value="3.2217248292403755" />
+      <entry key="S10" value="3.5911519665937606" />
+      <entry key="S30" value="6.412604456082376" />
+      <entry key="S60" value="16.659504765956655" />
+      <entry key="M2" value="37.74899136242724" />
+      <entry key="M5" value="73.71751746556671" />
+      <entry key="M10" value="107.49412706796231" />
+      <entry key="M15" value="142.97466561463952" />
+      <entry key="M30" value="329.23353221591327" />
+      <entry key="H1" value="838.71345203906" />
+      <entry key="H2" value="1559.475336767338" />
+      <entry key="H4" value="2195.8581680346256" />
+      <entry key="D1" value="2961.8865109024728" />
+      <entry key="W1" value="3121.476738017851" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.846097103692603E-49" />
-      <entry key="MS500" value="1.909970217165406E-10" />
-      <entry key="S2" value="0.005956410715529017" />
-      <entry key="S5" value="0.2546446323134034" />
-      <entry key="S10" value="1.1241631118858215" />
-      <entry key="S30" value="4.080539727970141" />
-      <entry key="S60" value="6.25465000831839" />
-      <entry key="M2" value="8.145405761241904" />
-      <entry key="M5" value="10.572895599007266" />
-      <entry key="M10" value="13.565298480959044" />
-      <entry key="M15" value="17.406970371451244" />
-      <entry key="M30" value="38.15005811718762" />
-      <entry key="H1" value="90.08815745311246" />
-      <entry key="H2" value="158.38213394851564" />
-      <entry key="H4" value="216.15813254671068" />
-      <entry key="D1" value="283.74268914589106" />
-      <entry key="W1" value="297.61408776843916" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="4.6185870200457494E-67" />
+      <entry key="S2" value="4.176911466833608E-17" />
+      <entry key="S5" value="5.549869607301978E-7" />
+      <entry key="S10" value="0.0016596001182217523" />
+      <entry key="S30" value="0.4646318598279067" />
+      <entry key="S60" value="2.1105648484629125" />
+      <entry key="M2" value="4.73162771919495" />
+      <entry key="M5" value="8.508109710036232" />
+      <entry key="M10" value="12.16883277063367" />
+      <entry key="M15" value="16.19084701767913" />
+      <entry key="M30" value="36.79327051132059" />
+      <entry key="H1" value="88.47168511001895" />
+      <entry key="H2" value="156.95475867076425" />
+      <entry key="H4" value="215.18189529028174" />
+      <entry key="D1" value="283.5287077716657" />
+      <entry key="W1" value="297.58201421008744" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.6197634593108149" />
-      <entry key="MS500" value="2.096099344068512" />
-      <entry key="S2" value="5.36162601798585" />
-      <entry key="S5" value="8.282023877431307" />
-      <entry key="S10" value="11.877854515206947" />
-      <entry key="S30" value="25.086782666181414" />
-      <entry key="S60" value="42.626331545959495" />
-      <entry key="M2" value="65.06670161662991" />
-      <entry key="M5" value="96.10368779933475" />
-      <entry key="M10" value="127.86619131089344" />
-      <entry key="M15" value="165.75871845250035" />
-      <entry key="M30" value="374.3073612035604" />
-      <entry key="H1" value="938.9702839462938" />
-      <entry key="H2" value="1726.9305067289833" />
-      <entry key="H4" value="2416.910513378628" />
-      <entry key="D1" value="3242.8506013996353" />
-      <entry key="W1" value="3414.425188830097" />
+      <entry key="MS100" value="0.04332636072907126" />
+      <entry key="MS500" value="0.6859875778024251" />
+      <entry key="S2" value="2.029280698387517" />
+      <entry key="S5" value="2.956356256419815" />
+      <entry key="S10" value="3.438843617827192" />
+      <entry key="S30" value="6.762043131371599" />
+      <entry key="S60" value="18.615062598024313" />
+      <entry key="M2" value="42.32423275184749" />
+      <entry key="M5" value="82.11869616756547" />
+      <entry key="M10" value="119.5893900127326" />
+      <entry key="M15" value="159.10105364814436" />
+      <entry key="M30" value="365.95613801074734" />
+      <entry key="H1" value="927.1023793679816" />
+      <entry key="H2" value="1716.3571079394158" />
+      <entry key="H4" value="2410.990027605843" />
+      <entry key="D1" value="3245.404212593844" />
+      <entry key="W1" value="3419.0571012980013" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -107,25 +147,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Lidor__BaseMechanicsBranch&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "copilot.chat.legacySessionMetadata.migrated": "true",
+    "git-widget-placeholder": "MechanicsRework",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.4.1f1\Editor\Unity.exe" />
@@ -173,6 +214,7 @@
       <updated>1780660273924</updated>
       <workItem from="1780660276803" duration="11600000" />
       <workItem from="1781619250196" duration="666000" />
+      <workItem from="1782223165172" duration="1348000" />
     </task>
     <servers />
   </component>
