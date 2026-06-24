@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
-public class PlayerInputReader : MonoBehaviour
+public class PlayerInputHandler : MonoBehaviour
 {
     [Header("Actions")]
     [SerializeField] private InputActionReference moveAction;
@@ -26,12 +26,12 @@ public class PlayerInputReader : MonoBehaviour
     
     private void OnDisable()
     {
+        jumpAction.action.performed -= HandleJump;
+        dashAction.action.performed -= HandleDash;
+        
         moveAction.action.Disable();
         jumpAction.action.Disable();
         dashAction.action.Disable();
-
-        jumpAction.action.performed -= HandleJump;
-        dashAction.action.performed -= HandleDash;
     }
 
     private void Update()

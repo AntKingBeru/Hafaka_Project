@@ -1,14 +1,14 @@
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
-[RequireComponent(typeof(PlayerInputReader))]
+[RequireComponent(typeof(PlayerInputHandler))]
 [RequireComponent(typeof(PlayerMovement))]
 [RequireComponent(typeof(PlayerJump))]
 [RequireComponent(typeof(PlayerDash))]
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private CharacterController characterController;
-    [SerializeField] private PlayerInputReader input;
+    [SerializeField] private CharacterController controller;
+    [SerializeField] private PlayerInputHandler input;
     [SerializeField] private PlayerMovement movement;
     [SerializeField] private PlayerJump jump;
     [SerializeField] private PlayerDash dash;
@@ -26,20 +26,19 @@ public class PlayerController : MonoBehaviour
         {
             input.onMove.RemoveListener(movement.SetMoveInput);
             input.onJump.RemoveListener(jump.TryJump);
-            input.onDash.RemoveListener(() => dash.TryDash(movement.LastDirection));
         }
     }
 
     private void Update()
     {
-        jump.SetGrounded(characterController.isGrounded);
+        jump.SetGrounded(controller.isGrounded);
 
-        var horizontal = dash.IsDashing && !float.IsNaN(dash.DashVelocity)
+        var horizontal = dash.IsDashing
             ? dash.DashVelocity
             : movement.HorizontalVelocity;
 
         var motion = new Vector3(horizontal, jump.VerticalVelocity, 0f) * Time.deltaTime;
         
-        characterController.Move(motion);
+        controller.Move(motion);
     }
 }

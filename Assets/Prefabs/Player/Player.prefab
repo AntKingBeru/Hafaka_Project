@@ -56,13 +56,13 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 3
+  m_Height: 2.75
   m_Radius: 0.75
   m_SlopeLimit: 45
   m_StepOffset: 0.4
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0
-  m_Center: {x: 0, y: 2, z: 0}
+  m_Center: {x: 0, y: 1.85, z: 0}
 --- !u!114 &7265477871480352089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,7 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9c995c96b04cca42934d666bc6ce4d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  characterController: {fileID: 3551497791438625120}
+  controller: {fileID: 3551497791438625120}
   input: {fileID: 4698785292282006936}
   movement: {fileID: 5299583896313630853}
   jump: {fileID: 5986396149936150185}

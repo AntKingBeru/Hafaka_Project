@@ -15,10 +15,10 @@ public class PlayerDash : MonoBehaviour
     private bool _isDashing;
     private float _dashTimer;
     private float _cooldownTimer;
-    private int _dashDirection;
+    private float _dashVelocity;
 
-    public float DashVelocity { get; private set; } = float.NaN;
     public bool IsDashing => _isDashing;
+    public float DashVelocity => _dashVelocity;
 
     private void Update()
     {
@@ -26,28 +26,22 @@ public class PlayerDash : MonoBehaviour
             _cooldownTimer -= Time.deltaTime;
 
         if (!_isDashing)
-        {
-            DashVelocity = float.NaN;
             return;
-        }
         
         _dashTimer -= Time.deltaTime;
 
         if (_dashTimer <= 0f)
             EndDash();
-        else
-            DashVelocity = dashSpeed * _dashDirection;
     }
 
     public void TryDash(int dir)
     {
-        if (!_isDashing || _cooldownTimer > 0f)
+        if (_isDashing || _cooldownTimer > 0f)
             return;
 
         _isDashing = true;
-        _dashDirection = dir;
+        _dashVelocity = dashSpeed * dir;
         _dashTimer = dashDuration;
-        DashVelocity = dashSpeed * _dashDirection;
         onDashStarted.Invoke();
     }
 
@@ -55,7 +49,7 @@ public class PlayerDash : MonoBehaviour
     {
         _isDashing = false;
         _cooldownTimer = dashCooldown;
-        DashVelocity = float.NaN;
+        _dashVelocity = 0f;
         onDashEnded.Invoke();
     }
 }

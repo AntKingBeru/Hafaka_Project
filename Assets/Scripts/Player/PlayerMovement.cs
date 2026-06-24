@@ -25,10 +25,15 @@ public class PlayerMovement : MonoBehaviour
     {
         HorizontalVelocity = _currentInput * moveSpeed;
 
-        if (_currentInput > 0f && _lastDirection != 1)
-            SetFacing(1);
-        else if (_currentInput < 0f && _lastDirection != -1)
-            SetFacing(-1);
+        switch (_currentInput)
+        {
+            case > 0f when _lastDirection != 1:
+                SetFacing(1);
+                break;
+            case < 0f when _lastDirection != -1:
+                SetFacing(-1);
+                break;
+        }
 
         TickRotation();
     }
