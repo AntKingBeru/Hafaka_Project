@@ -14,7 +14,7 @@ public class DisappearingPlatform : MonoBehaviour
     
     [Header("References")]
     [SerializeField] private Collider col;
-    [SerializeField] private Renderer rend;
+    [SerializeField] private Renderer[] rends;
     
     private bool _isVisible;
     private float _timer;
@@ -42,8 +42,9 @@ public class DisappearingPlatform : MonoBehaviour
         
         if (col)
             col.enabled = visible;
-        if (rend)
-            rend.enabled = visible;
+        if (rends.Length > 0)
+            foreach (var rend in rends)
+                rend.enabled = visible;
         
         if (visible)
             onBecomeVisible.Invoke();

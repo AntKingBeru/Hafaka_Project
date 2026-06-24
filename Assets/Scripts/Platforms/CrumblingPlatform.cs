@@ -14,7 +14,7 @@ public class CrumblingPlatform : MonoBehaviour
     
     [Header("References")]
     [SerializeField] private Collider col;
-    [SerializeField] private Renderer rend;
+    [SerializeField] private Renderer[] rends;
 
     private bool _isCrumbling;
     private bool _isBroken;
@@ -55,8 +55,9 @@ public class CrumblingPlatform : MonoBehaviour
         
         if (col)
             col.enabled = false;
-        if (rend)
-            rend.enabled = false;
+        if (rends.Length > 0)
+            foreach (var rend in rends)
+                rend.enabled = false;
         
         onCrumble.Invoke();
     }
@@ -67,8 +68,9 @@ public class CrumblingPlatform : MonoBehaviour
         
         if (col)
             col.enabled = true;
-        if (rend)
-            rend.enabled = true;
+        if (rends.Length > 0)
+            foreach (var rend in rends)
+                rend.enabled = true;
         
         onRespawn.Invoke();
     }
