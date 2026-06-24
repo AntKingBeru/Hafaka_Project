@@ -60,6 +60,11 @@ public class PlayerJump : MonoBehaviour
             onSecondJump.Invoke();
     }
 
+    public void ApplyBounce(float force)
+    {
+        VerticalVelocity = force;
+    }
+
     private void ApplyGravity()
     {
         float gravity;

@@ -20,7 +20,7 @@ public class CrumblingPlatform : MonoBehaviour
     private bool _isBroken;
     private float _timer;
 
-    private void OnPlayerLanded()
+    public void OnPlayerLanded()
     {
         if (_isCrumbling || _isBroken)
             return;
