@@ -12,7 +12,6 @@ public class PlatformMover : MonoBehaviour
     [SerializeField] private Axis axis = Axis.Horizontal;
     [SerializeField] private float distance = 4f;
     [SerializeField] private float speed = 3f;
-    [SerializeField] private bool startAtOrigin = true;
 
     private Vector3 _originPosition;
     private float _travelled;
@@ -21,7 +20,6 @@ public class PlatformMover : MonoBehaviour
     private void Start()
     {
         _originPosition = transform.position;
-        _travelled = startAtOrigin ? 0f : distance;
     }
 
     private void Update()
@@ -35,7 +33,7 @@ public class PlatformMover : MonoBehaviour
         }
         else if (_travelled <= -distance)
         {
-            _travelled -= distance;
+            _travelled = -distance;
             _direction = 1f;
         }
 

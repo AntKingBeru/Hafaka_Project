@@ -6,6 +6,9 @@ public class BouncyPlatform : MonoBehaviour
     [Header("Bounce Settings")]
     [SerializeField] private float bounceForce = 20f;
     
+    [Header("References")]
+    [SerializeField] private Collider solidCol;
+    
     [Header("Events")]
     public UnityEvent onBounce;
 

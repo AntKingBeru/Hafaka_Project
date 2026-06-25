@@ -64,6 +64,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 7140557775832849239}
   m_SourcePrefab: {fileID: 100100000, guid: 4c4540a434f79894bbb6b6a190eb6108, type: 3}
+--- !u!65 &7075787766473125135 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: -2349238258194707744, guid: 4c4540a434f79894bbb6b6a190eb6108, type: 3}
+  m_PrefabInstance: {fileID: 4420260203176617967}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7387818622160832976 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6616112040090725951, guid: 4c4540a434f79894bbb6b6a190eb6108, type: 3}
@@ -82,6 +87,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BouncyPlatform
   bounceForce: 20
+  solidCol: {fileID: 7075787766473125135}
   onBounce:
     m_PersistentCalls:
       m_Calls: []

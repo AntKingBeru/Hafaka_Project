@@ -19,31 +19,27 @@ public class CrumblingPlatform : MonoBehaviour
     private bool _isCrumbling;
     private bool _isBroken;
     private float _timer;
-
+    
     public void OnPlayerLanded()
     {
         if (_isCrumbling || _isBroken)
             return;
-        
+
         _isCrumbling = true;
         _timer = crumbleDelay;
         onCrumbleWarning.Invoke();
     }
-
+    
     private void Update()
     {
         if (!_isCrumbling && !_isBroken)
             return;
-        
+
         _timer -= Time.deltaTime;
 
         if (_isCrumbling && _timer <= 0f)
-        {
             Crumble();
-            return;
-        }
-
-        if (_isBroken && _timer <= 0f)
+        else if (_isBroken && _timer <= 0f)
             Respawn();
     }
 

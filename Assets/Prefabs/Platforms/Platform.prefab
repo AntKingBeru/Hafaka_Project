@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4929012733681235696}
   - component: {fileID: -2349238258194707744}
-  - component: {fileID: 9093417363777961771}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Untagged
@@ -57,23 +56,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5, y: 1, z: 7.5}
+  m_Size: {x: 5, y: 1, z: 8}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &9093417363777961771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6616112040090725951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3d5f2c2e893c524a9263040ba9000e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlatformPlayerCarrier
-  topSurfaceTrigger: {fileID: -2349238258194707744}
-  crumblingPlatform: {fileID: 0}
-  bouncyPlatform: {fileID: 0}
 --- !u!1001 &1860347831493626615
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -136,7 +120,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdf0c74e2dde5864daf60d0ac0031c73, type: 3}
       propertyPath: m_Name
-      value: block_platform_1_geo
+      value: Block
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdf0c74e2dde5864daf60d0ac0031c73, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -215,7 +199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdf0c74e2dde5864daf60d0ac0031c73, type: 3}
       propertyPath: m_Name
-      value: block_platform_1_geo (1)
+      value: Block
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdf0c74e2dde5864daf60d0ac0031c73, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -294,7 +278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdf0c74e2dde5864daf60d0ac0031c73, type: 3}
       propertyPath: m_Name
-      value: block_platform_1_geo (2)
+      value: Block
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdf0c74e2dde5864daf60d0ac0031c73, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -373,7 +357,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdf0c74e2dde5864daf60d0ac0031c73, type: 3}
       propertyPath: m_Name
-      value: block_platform_1_geo (3)
+      value: Block
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdf0c74e2dde5864daf60d0ac0031c73, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -452,7 +436,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdf0c74e2dde5864daf60d0ac0031c73, type: 3}
       propertyPath: m_Name
-      value: block_platform_1_geo (4)
+      value: Block
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdf0c74e2dde5864daf60d0ac0031c73, type: 3}
       propertyPath: m_StaticEditorFlags
