@@ -10,29 +10,7 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8abec611-85b6-4918-a764-2fc510d87e3c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Hafaka_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hafaka_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Platforms/BouncyPlatform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Platforms/BouncyPlatform.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Platforms/CrumblingPlatform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Platforms/CrumblingPlatform.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Platforms/MovingPlatform-Horizontal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Platforms/MovingPlatform-Horizontal.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Platforms/MovingPlatform-Vertical.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Platforms/MovingPlatform-Vertical.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Platforms/OneWayPlatform.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Platforms/OneWayPlatform.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Platforms/Platform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Platforms/Platform.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Platforms/BouncyPlatform.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Platforms/BouncyPlatform.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Platforms/CrumblingPlatform.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Platforms/CrumblingPlatform.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Platforms/OneWayPlatform.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Platforms/OneWayPlatform.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Platforms/PlatformMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Platforms/PlatformMover.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Platforms/PlatformPlayerCarrier.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Platforms/PlatformPlayerCarrier.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-    </list>
+    <list default="true" id="8abec611-85b6-4918-a764-2fc510d87e3c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -205,7 +183,7 @@
       <workItem from="1782297245429" duration="2778000" />
       <workItem from="1782310011027" duration="669000" />
       <workItem from="1782324303747" duration="506000" />
-      <workItem from="1782393110858" duration="2687000" />
+      <workItem from="1782393110858" duration="3279000" />
     </task>
     <servers />
   </component>
