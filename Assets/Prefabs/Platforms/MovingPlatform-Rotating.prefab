@@ -77,5 +77,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f35f9e113cd2212468c41b4c84621fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RotatingPlatform
-  rotationAxis: {x: -1, y: 0, z: 0}
+  rotationAxis: {x: 0, y: 0, z: -1}
   degreesPerSecond: 45
