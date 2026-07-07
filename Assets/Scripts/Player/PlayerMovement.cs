@@ -2,12 +2,16 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private static readonly int MoveSpeed = Animator.StringToHash("MoveSpeed");
+
     [Header("Movement Settings")]
     [SerializeField] private float moveSpeed = 8f;
     
     [Header("Visual Root")]
     [SerializeField] private Transform visualRoot;
     [SerializeField] private float rotationDuration = 0.08f;
+
+    [SerializeField] private Animator anim;
 
     private int _lastDirection = 1;
     private float _currentInput;
@@ -38,7 +42,11 @@ public class PlayerMovement : MonoBehaviour
         TickRotation();
     }
     
-    public void SetMoveInput(Vector2 input) => _currentInput = input.x;
+    public void SetMoveInput(Vector2 input)
+    {
+        _currentInput = input.x;
+        anim.SetFloat(MoveSpeed, Mathf.Abs(input.x));
+    }
 
     private void SetFacing(int dir)
     {

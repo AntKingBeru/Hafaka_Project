@@ -120,6 +120,7 @@ MonoBehaviour:
   moveSpeed: 8
   visualRoot: {fileID: 3232374238004769367}
   rotationDuration: 0.08
+  anim: {fileID: 6556934212776570207}
 --- !u!114 &5986396149936150185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,14 +160,62 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDash
   dashSpeed: 22
-  dashDuration: 0.18
+  dashDuration: 0.215
   dashCooldown: 0.8
   onDashStarted:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6556934212776570207}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: StartDash
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6556934212776570207}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: ResetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: EndDash
+          m_BoolArgument: 0
+        m_CallState: 2
   onDashEnded:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6556934212776570207}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: EndDash
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6556934212776570207}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: StartDash
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6716827824686687911
 MonoBehaviour:
   m_ObjectHideFlags: 0
