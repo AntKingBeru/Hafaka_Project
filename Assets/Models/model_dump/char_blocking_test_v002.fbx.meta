@@ -582,7 +582,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 5
-    rootMotionBoneName: 
+    rootMotionBoneName: blocking_robot_grp
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
