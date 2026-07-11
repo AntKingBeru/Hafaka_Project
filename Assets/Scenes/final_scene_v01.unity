@@ -17,7 +17,7 @@ RenderSettings:
   m_Fog: 1
   m_FogColor: {r: 0.16197932, g: 0.16884892, b: 0.18867922, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.005
+  m_FogDensity: 0.003
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: b4bb78325072e124a9db7df5d9055a74, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: d0163bda4a054d442ba68da7a6420411, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: fc8782a701d0bf046a9930972bab1621, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -22244,6 +22244,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2026232764}
     m_Modifications:
+    - target: {fileID: 1430477754107124273, guid: e3ac2e359a55b5d43b90781d97005524, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1430477754107124273, guid: e3ac2e359a55b5d43b90781d97005524, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1430477754107124273, guid: e3ac2e359a55b5d43b90781d97005524, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 6599714896197545399, guid: e3ac2e359a55b5d43b90781d97005524, type: 3}
       propertyPath: m_Name
       value: dissapearingplatform
