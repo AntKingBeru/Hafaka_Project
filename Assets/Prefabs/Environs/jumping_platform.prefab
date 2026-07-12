@@ -82,6 +82,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4bf8c4775430c534f95267ea9328d0b5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8097434500756166401}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4bf8c4775430c534f95267ea9328d0b5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8493235085454422304}
     - targetCorrespondingSourceObject: {fileID: -1061524597486702777, guid: 4bf8c4775430c534f95267ea9328d0b5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8528118284738184408}
@@ -160,3 +163,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.2956917, y: 0.23497523, z: 2.8370166}
   m_Center: {x: 0.04179605, y: -0.0056830863, z: 0.086992405}
+--- !u!114 &8493235085454422304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5083742683884020488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2707f5e65379d6d419e94064f56abc7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BouncyPlatform
+  bounceForce: 20
+  solidCol: {fileID: 8528118284738184408}
+  onBounce:
+    m_PersistentCalls:
+      m_Calls: []
