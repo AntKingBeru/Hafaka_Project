@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerPlatformDetector : MonoBehaviour
@@ -6,6 +7,7 @@ public class PlayerPlatformDetector : MonoBehaviour
     [SerializeField] private float raycastPadding = 0.1f;
     [SerializeField] private CharacterController controller;
     [SerializeField] private PlayerJump jump;
+    [SerializeField] private PlayerHealth health;
 
     private GameObject _lastPlatform;
     
@@ -20,7 +22,7 @@ public class PlayerPlatformDetector : MonoBehaviour
             return;
         }
 
-        NotifyPlatform(hit.collider);
+        NotifyContact(hit.collider);
     }
     
     private void OnControllerColliderHit(ControllerColliderHit hit)
@@ -28,12 +30,13 @@ public class PlayerPlatformDetector : MonoBehaviour
         if (hit.normal.y < 0.5f)
             return;
         
-        NotifyPlatform(hit.collider);
+        NotifyContact(hit.collider);
     }
 
-    private void NotifyPlatform(Collider other)
+    private void NotifyContact(Collider other)
     {
         other.GetComponent<BouncyPlatform>()?.OnPlayerLanded(jump);
+        other.GetComponent<SpikeTrap>()?.OnPlayerLanded(health);
 
         var platform = other.gameObject;
         if (platform == _lastPlatform)
