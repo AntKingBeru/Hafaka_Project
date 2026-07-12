@@ -146,9 +146,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87c155452ca0c4842b6a5b06ee59ca05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  moveSpeed: 8
+  moveSpeed: 4.3
   visualRoot: {fileID: 3232374238004769367}
-  rotationDuration: 0.08
+  rotationDuration: 0.1
   anim: {fileID: 6556934212776570207}
 --- !u!114 &5986396149936150185
 MonoBehaviour:
@@ -164,9 +164,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerJump
   jumpForce: 13.5
   riseGravity: 20
-  fallGravity: 28
+  fallGravity: 32
   apexGravityBoost: 6
-  apexThreshold: 2
+  apexThreshold: 200
   onFirstJump:
     m_PersistentCalls:
       m_Calls:
@@ -272,9 +272,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fca775600af9a114783524f785032b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDash
-  dashSpeed: 22
-  dashDuration: 0.215
-  dashCooldown: 0.8
+  dashSpeed: 35
+  dashDuration: 0.4
+  dashCooldown: 0.5
   onDashStarted:
     m_PersistentCalls:
       m_Calls:
