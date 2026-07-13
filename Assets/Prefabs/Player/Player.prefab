@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87c155452ca0c4842b6a5b06ee59ca05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  moveSpeed: 4.3
+  moveSpeed: 7
   visualRoot: {fileID: 3232374238004769367}
   rotationDuration: 0.1
   anim: {fileID: 6556934212776570207}
