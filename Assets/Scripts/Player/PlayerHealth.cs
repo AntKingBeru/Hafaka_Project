@@ -6,6 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
     [Header("Events")]
     public UnityEvent onDeath;
+    public UnityEvent onWin;
     
     [SerializeField] private PlayerController controller;
 
@@ -19,8 +20,6 @@ public class PlayerHealth : MonoBehaviour
         _isDead = true;
         controller.enabled = false;
         Time.timeScale = 0f;
-        
-        Debug.Log("Player died.");
         onDeath.Invoke();
     }
 }
