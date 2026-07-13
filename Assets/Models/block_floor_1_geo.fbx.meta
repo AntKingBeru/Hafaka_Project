@@ -8,12 +8,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: emmissive
-    second: {fileID: 2100000, guid: e49f108ab0347b348b40120fbe62c007, type: 2}
+    second: {fileID: 2100000, guid: 0f8c3fe459c4eef45bf249a86d9df1c7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: lambert1
-    second: {fileID: 2100000, guid: e49f108ab0347b348b40120fbe62c007, type: 2}
+    second: {fileID: 2100000, guid: 0f8c3fe459c4eef45bf249a86d9df1c7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
