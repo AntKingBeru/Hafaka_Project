@@ -15609,7 +15609,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c979c917eb1e61f43a6722baf29fc0bb, type: 2}
+  - {fileID: 2100000, guid: f5faba04ceb60134597cb316967b9ab5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16295,17 +16295,25 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1229767784}
+    - target: {fileID: 2686410060839271360, guid: 3178c25bd7c85d047b43f3c6ab1a58cf, type: 3}
+      propertyPath: xyOffset.x
+      value: -19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2686410060839271360, guid: 3178c25bd7c85d047b43f3c6ab1a58cf, type: 3}
+      propertyPath: xyOffset.y
+      value: 142.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3589225915549224780, guid: 3178c25bd7c85d047b43f3c6ab1a58cf, type: 3}
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
     - target: {fileID: 6754586909785932190, guid: 3178c25bd7c85d047b43f3c6ab1a58cf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.6
+      value: -19
       objectReference: {fileID: 0}
     - target: {fileID: 6754586909785932190, guid: 3178c25bd7c85d047b43f3c6ab1a58cf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 140.6
+      value: 142.5
       objectReference: {fileID: 0}
     - target: {fileID: 6754586909785932190, guid: 3178c25bd7c85d047b43f3c6ab1a58cf, type: 3}
       propertyPath: m_LocalPosition.z
