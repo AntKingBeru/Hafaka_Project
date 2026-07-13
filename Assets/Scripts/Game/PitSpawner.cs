@@ -46,6 +46,7 @@ public class PitSpawner : MonoBehaviour
         var pit = new GameObject("PitTrigger")
         {
             tag = "Untagged",
+            layer = LayerMask.NameToLayer("PlayerInteract"),
             transform =
             {
                 position = new Vector3(centerX, PitY, 0f)

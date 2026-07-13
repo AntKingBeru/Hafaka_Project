@@ -16,15 +16,25 @@ public class PlatformMover : MonoBehaviour
     private Vector3 _originPosition;
     private float _travelled;
     private float _direction = 1f;
+    private int _lastTickedFrame = -1;
+    
+    public Axis MovementAxis => axis;
+    
+    public Vector3 DeltaMovement { get; private set; }
 
     private void Start()
     {
         _originPosition = transform.position;
     }
 
-    private void Update()
+    public void Tick(float deltaTime)
     {
-        _travelled += _direction * speed * Time.deltaTime;
+        if (_lastTickedFrame == Time.frameCount)
+            return;
+        
+        _lastTickedFrame = Time.frameCount;
+        
+        _travelled += _direction * speed * deltaTime;
 
         if (_travelled >= distance)
         {
@@ -41,6 +51,8 @@ public class PlatformMover : MonoBehaviour
             ? new Vector3(_travelled, 0f, 0f)
             : new Vector3(0f, _travelled, 0f);
         
-        transform.position = _originPosition + offset;
+        var newPosition = _originPosition + offset;
+        DeltaMovement = newPosition - transform.position;
+        transform.position = newPosition;
     }
 }

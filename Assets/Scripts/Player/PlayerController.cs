@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerMovement))]
 [RequireComponent(typeof(PlayerJump))]
 [RequireComponent(typeof(PlayerDash))]
+[RequireComponent(typeof(PlayerPlatformDetector))]
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private CharacterController controller;
@@ -12,6 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PlayerMovement movement;
     [SerializeField] private PlayerJump jump;
     [SerializeField] private PlayerDash dash;
+    [SerializeField] private PlayerPlatformDetector detector;
 
     private void Awake()
     {
@@ -31,14 +33,27 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        jump.SetGrounded(controller.isGrounded);
+        var grounded = controller.isGrounded || detector.IsGrounded;
+        jump.SetGrounded(grounded);
+        
+        var mover = detector.CurrentMover;
 
         var horizontal = dash.IsDashing
             ? dash.DashVelocity
             : movement.HorizontalVelocity;
 
         var motion = new Vector3(horizontal, jump.VerticalVelocity, 0f) * Time.deltaTime;
-        
+
+        if (mover)
+            motion.x += mover.DeltaMovement.x;
+                
         controller.Move(motion);
+
+        if (mover && mover.DeltaMovement.y != 0f)
+        {
+            controller.enabled = false;
+            transform.position += new Vector3(0f, mover.DeltaMovement.y, 0f);
+            controller.enabled = true;
+        }
     }
 }
