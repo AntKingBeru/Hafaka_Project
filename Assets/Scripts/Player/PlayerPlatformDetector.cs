@@ -8,13 +8,20 @@ public class PlayerPlatformDetector : MonoBehaviour
     [SerializeField] private PlayerJump jump;
     [SerializeField] private PlayerHealth health;
     [SerializeField] private LayerMask platformMask = Physics.DefaultRaycastLayers;
+    [SerializeField] private LayerMask pitMask;
 
     private GameObject _lastPlatform;
     
     public PlatformMover CurrentMover { get; private set; }
     public bool IsGrounded { get; private set; }
-    
+
     private void Update()
+    {
+        CheckGround();
+        CheckPit();
+    }
+    
+    private void CheckGround()
     {
         var rayLength = (controller.height / 2f) + controller.skinWidth + raycastPadding;
         var origin = transform.position + Vector3.up * (controller.height / 2f);
@@ -31,6 +38,15 @@ public class PlayerPlatformDetector : MonoBehaviour
         CurrentMover = hit.collider.GetComponent<PlatformMover>();
 
         NotifyContact(hit.collider);
+    }
+
+    private void CheckPit()
+    {
+        var rayLength = (controller.height / 2f) + controller.skinWidth + 0.5f;
+        var origin = transform.position + Vector3.up * (controller.height / 2f);
+        
+        if (Physics.Raycast(origin, Vector3.down, out var hit, rayLength, pitMask))
+            hit.collider.GetComponent<PitTrigger>()?.TriggerDeath(health);
     }
     
     private void OnControllerColliderHit(ControllerColliderHit hit)

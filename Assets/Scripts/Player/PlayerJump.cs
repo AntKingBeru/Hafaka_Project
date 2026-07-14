@@ -76,6 +76,6 @@ public class PlayerJump : MonoBehaviour
         else
             gravity = fallGravity;
         
-        VerticalVelocity -= gravity * Time.deltaTime;
+        VerticalVelocity -= gravity * Time.unscaledDeltaTime;
     }
 }

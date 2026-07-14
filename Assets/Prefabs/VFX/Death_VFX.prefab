@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3821203007369621867}
   - component: {fileID: 2251243589222345342}
   - component: {fileID: 4535253919972886877}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Death_VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,7 +50,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 1
   autoRandomSeed: 1
   startDelay:

@@ -44,13 +44,12 @@ public class GameUI : MonoBehaviour
     private void OnMainMenuClicked()
     {
         Time.timeScale = 1f;
-        // Main menu scene loading will be implemented later.
-        Debug.Log("Main menu requested.");
+        SceneLoader.Instance.LoadMainMenu();
     }
 
     private void OnRespawnClicked()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneLoader.Instance.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

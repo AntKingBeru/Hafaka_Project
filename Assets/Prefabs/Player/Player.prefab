@@ -106,6 +106,33 @@ MonoBehaviour:
           m_StringArgument: Dead
           m_BoolArgument: 0
         m_CallState: 2
+  onDeathSilent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4218100133004820406}
+        m_TargetAssemblyTypeName: PlayerVFX, Assembly-CSharp
+        m_MethodName: ShowLoseSilent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6556934212776570207}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Dead
+          m_BoolArgument: 0
+        m_CallState: 2
   onWin:
     m_PersistentCalls:
       m_Calls:
@@ -120,18 +147,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 7265477871480352089}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 4698785292282006936}
         m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
@@ -193,7 +208,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  controller: {fileID: 7265477871480352089}
+  input: {fileID: 4698785292282006936}
 --- !u!114 &7265477871480352089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -449,7 +464,10 @@ MonoBehaviour:
   health: {fileID: 1912221162792064668}
   platformMask:
     serializedVersion: 2
-    m_Bits: 503
+    m_Bits: 183
+  pitMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!114 &4218100133004820406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -605,10 +623,6 @@ PrefabInstance:
     - target: {fileID: 6312666996115285347, guid: 19f41ab5b8bae9c46b554f984dc586de, type: 3}
       propertyPath: m_Name
       value: Win_VFX
-      objectReference: {fileID: 0}
-    - target: {fileID: 6312666996115285347, guid: 19f41ab5b8bae9c46b554f984dc586de, type: 3}
-      propertyPath: m_Layer
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1840,10 +1854,6 @@ PrefabInstance:
     - target: {fileID: 6041712538750401303, guid: 984c7879aff3bbe43a7dc8208a62f94b, type: 3}
       propertyPath: m_Name
       value: Death_VFX
-      objectReference: {fileID: 0}
-    - target: {fileID: 6041712538750401303, guid: 984c7879aff3bbe43a7dc8208a62f94b, type: 3}
-      propertyPath: m_Layer
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

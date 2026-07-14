@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PitSpawner : MonoBehaviour
 {
@@ -11,10 +12,26 @@ public class PitSpawner : MonoBehaviour
     [Tooltip("Extra width added to each side beyond the map bounds.")]
     [SerializeField] private float xPadding = 50f;
     
+    [Tooltip("Build index of the main menu scene — pit is not spawned there.")]
+    [SerializeField] private int mainMenuSceneIndex = 0;
+    
     public static float PitY { get; private set; }
-
-    private void Start()
+    
+    private void OnEnable()
     {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.buildIndex == mainMenuSceneIndex)
+            return;
+        
         SpawnPit();
     }
 

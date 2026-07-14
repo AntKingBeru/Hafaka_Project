@@ -13,7 +13,7 @@ public class LevelFinish : MonoBehaviour
         if (nextIndex < SceneManager.sceneCountInBuildSettings)
         {
             Time.timeScale = 1f;
-            SceneManager.LoadScene(nextIndex);
+            SceneLoader.Instance.LoadScene(nextIndex);
         }
         else
         {

@@ -6,26 +6,31 @@ public class PlayerVFX : MonoBehaviour
     [SerializeField] private ParticleSystem deathSparks;
     [SerializeField] private ParticleSystem winConfetti;
     [SerializeField] private Vector3 offset = new Vector3(0f, 0.5f, 0f);
+    
+    private float _winDuration;
 
     private void Awake()
     {
         SetUnscaledTime(deathSparks);
         SetUnscaledTime(winConfetti);
+        
+        _winDuration = winConfetti ? winConfetti.main.duration : 0f;
     }
 
     public void PlayDeath()
     {
-        if (!deathSparks)
+        if (deathSparks)
         {
-            GameUI.Instance.ShowLose();
-            return;
+            deathSparks.transform.position = transform.position + offset;
+            deathSparks.Play();
         }
         
-        deathSparks.transform.position = transform.position+ offset;
-        deathSparks.Play();
-        StartCoroutine(ShowUIAfterDelay(
-            deathSparks.main.duration,
-            GameUI.Instance.ShowLose));
+        GameUI.Instance.ShowLose();
+    }
+
+    public void ShowLoseSilent()
+    {
+        GameUI.Instance.ShowLose();
     }
 
     public void PlayWin()
@@ -38,9 +43,7 @@ public class PlayerVFX : MonoBehaviour
         
         winConfetti.transform.position = transform.position + offset;
         winConfetti.Play();
-        StartCoroutine(ShowUIAfterDelay(
-            winConfetti.main.duration,
-            GameUI.Instance.ShowWin));
+        StartCoroutine(ShowUIAfterDelay(_winDuration, GameUI.Instance.ShowWin));
     }
     
     private IEnumerator ShowUIAfterDelay(float delay, System.Action showUI)

@@ -33,8 +33,8 @@ public class CameraFollow : MonoBehaviour
             target.position.z + zOffset
         );
 
-        desired.y = Mathf.Max(desired.y, PitSpawner.PitY);
+        desired.y = Mathf.Max(desired.y, PitSpawner.PitY + xyOffset.y);
         
-        transform.position = Vector3.SmoothDamp(transform.position, desired, ref _velocity, smoothTime);
+        transform.position = Vector3.SmoothDamp(transform.position, desired, ref _velocity, smoothTime, Mathf.Infinity, Time.unscaledDeltaTime);
     }
 }

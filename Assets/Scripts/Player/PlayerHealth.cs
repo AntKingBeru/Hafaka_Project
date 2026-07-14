@@ -6,20 +6,25 @@ public class PlayerHealth : MonoBehaviour
 {
     [Header("Events")]
     public UnityEvent onDeath;
+    public UnityEvent onDeathSilent;
     public UnityEvent onWin;
     
-    [SerializeField] private PlayerController controller;
+    [SerializeField] private PlayerInputHandler input;
 
     private bool _isDead;
 
-    public void Kill()
+    public void Kill(bool playVFX = true)
     {
         if (_isDead)
             return;
 
         _isDead = true;
-        controller.enabled = false;
+        input.enabled = false;
         Time.timeScale = 0f;
-        onDeath.Invoke();
+        
+        if (playVFX)
+            onDeath.Invoke();
+        else
+            onDeathSilent.Invoke();
     }
 }

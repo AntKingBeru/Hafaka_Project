@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
             ? dash.DashVelocity
             : movement.HorizontalVelocity;
 
-        var motion = new Vector3(horizontal, jump.VerticalVelocity, 0f) * Time.deltaTime;
+        var motion = new Vector3(horizontal, jump.VerticalVelocity, 0f) * Time.unscaledDeltaTime;
 
         if (mover)
             motion.x += mover.DeltaMovement.x;

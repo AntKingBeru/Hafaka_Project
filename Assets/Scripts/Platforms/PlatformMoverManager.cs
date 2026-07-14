@@ -1,10 +1,21 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlatformMoverManager : MonoBehaviour
 {
     private PlatformMover[] _movers;
+    
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
 
-    private void Start()
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         _movers = FindObjectsByType<PlatformMover>(FindObjectsInactive.Exclude);
     }
