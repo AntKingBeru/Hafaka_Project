@@ -7,6 +7,6 @@ public class PitTrigger : MonoBehaviour
         if (!other.CompareTag("Player"))
             return;
 
-        other.GetComponent<PlayerHealth>()?.Kill();
+        other.GetComponentInParent<PlayerHealth>()?.Kill();
     }
 }

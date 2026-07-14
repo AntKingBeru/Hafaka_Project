@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Events;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerPlatformDetector : MonoBehaviour
@@ -8,19 +7,28 @@ public class PlayerPlatformDetector : MonoBehaviour
     [SerializeField] private CharacterController controller;
     [SerializeField] private PlayerJump jump;
     [SerializeField] private PlayerHealth health;
+    [SerializeField] private LayerMask platformMask = Physics.DefaultRaycastLayers;
 
     private GameObject _lastPlatform;
+    
+    public PlatformMover CurrentMover { get; private set; }
+    public bool IsGrounded { get; private set; }
     
     private void Update()
     {
         var rayLength = (controller.height / 2f) + controller.skinWidth + raycastPadding;
         var origin = transform.position + Vector3.up * (controller.height / 2f);
 
-        if (!Physics.Raycast(origin, Vector3.down, out var hit, rayLength))
+        if (!Physics.Raycast(origin, Vector3.down, out var hit, rayLength, platformMask))
         {
             _lastPlatform = null;
+            CurrentMover = null;
+            IsGrounded = false;
             return;
         }
+
+        IsGrounded = true;
+        CurrentMover = hit.collider.GetComponent<PlatformMover>();
 
         NotifyContact(hit.collider);
     }

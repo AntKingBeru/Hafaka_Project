@@ -17,7 +17,7 @@ public class LevelFinish : MonoBehaviour
         }
         else
         {
-            other.GetComponent<PlayerHealth>().onWin.Invoke();
+            other.GetComponentInParent<PlayerHealth>().onWin.Invoke();
         }
     }
 }
