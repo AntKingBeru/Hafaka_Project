@@ -20,10 +20,12 @@ public class PlayerMovement : MonoBehaviour
     private float _rotationTimer;
     private float _rotationStartY;
     private float _rotationEndY;
+    private float _currentVerticalInput;
 
     public float HorizontalVelocity { get; private set; }
     
     public int LastDirection => _lastDirection;
+    public float VerticalInput => _currentVerticalInput;
 
     private void Update()
     {
@@ -45,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
     public void SetMoveInput(Vector2 input)
     {
         _currentInput = input.x;
+        _currentVerticalInput = input.y;
         anim.SetFloat(MoveSpeed, Mathf.Abs(input.x));
     }
 

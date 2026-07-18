@@ -12,33 +12,18 @@
   <component name="ChangeListManager">
     <list default="true" id="8abec611-85b6-4918-a764-2fc510d87e3c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hafaka_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hafaka_Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Char.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Char.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Logs/Packages-Update.log.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Logs/shadercompiler-UnityShaderCompiler.exe-0.log.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GameManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/GameManager.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VFX/Death_VFX.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/VFX/Death_VFX.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VFX/Win_VFX.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/VFX/Win_VFX.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_Liron.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_Liron.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_Sean.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_Sean.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_Shir.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_Shir.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/main_menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/main_menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraFollow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraFollow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Environs/LevelFinish.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Environs/LevelFinish.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Environs/PitTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Environs/PitTrigger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/GameUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GameUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/PitSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/PitSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Platforms/PlatformMoverManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Platforms/PlatformMoverManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraFollow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraFollow.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerJump.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerJump.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerPlatformDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerPlatformDetector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerVFX.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerVFX.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/post_prossesing/final_lut_vilume.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/post_prossesing/final_lut_vilume.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,13 +37,11 @@
   </component>
   <component name="EmbeddingIndexingInfo">
     <option name="cachedIndexableFilesCount" value="11" />
-    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/61dc858e9c064822b944126a40a6078e214600/5f/d0315402/Time.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Environs/LevelFinish.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Environs/PitTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/GameUI.cs" root0="FORCE_HIGHLIGHTING" />
@@ -71,8 +54,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Platforms/PlatformMover.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Platforms/PlatformMoverManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Platforms/RotatingPlatform.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimatorBridge.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerDash.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerGodMode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerJump.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerPlatformDetector.cs" root0="FORCE_HIGHLIGHTING" />
@@ -84,61 +69,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0161648924748234" />
-      <entry key="MS500" value="2.943981476480617" />
-      <entry key="S2" value="8.683630266705626" />
-      <entry key="S5" value="12.235416168010289" />
-      <entry key="S10" value="13.92946095835051" />
-      <entry key="S30" value="15.295103940223317" />
-      <entry key="S60" value="16.4196760766636" />
-      <entry key="M2" value="20.224241188748493" />
-      <entry key="M5" value="35.884185618822585" />
-      <entry key="M10" value="60.213681864637934" />
-      <entry key="M15" value="81.81471988972342" />
-      <entry key="M30" value="149.02540125979064" />
-      <entry key="H1" value="317.6867163659494" />
-      <entry key="H2" value="823.5841622904113" />
-      <entry key="H4" value="1877.8370679681252" />
-      <entry key="D1" value="4655.209712775536" />
-      <entry key="W1" value="5543.449299545679" />
+      <entry key="MS100" value="1.0000110929299721" />
+      <entry key="MS500" value="1.1020961238887528" />
+      <entry key="S2" value="1.565265283562296" />
+      <entry key="S5" value="1.7959777455475237" />
+      <entry key="S10" value="1.8922008793847287" />
+      <entry key="S30" value="2.013961428440325" />
+      <entry key="S60" value="2.425762356807197" />
+      <entry key="M2" value="3.657418308089376" />
+      <entry key="M5" value="7.76542488774281" />
+      <entry key="M10" value="14.634422221241195" />
+      <entry key="M15" value="20.851610370380815" />
+      <entry key="M30" value="55.9075973999364" />
+      <entry key="H1" value="195.69292377870434" />
+      <entry key="H2" value="608.0333542485392" />
+      <entry key="H4" value="1583.8211049426586" />
+      <entry key="D1" value="4826.8971436306365" />
+      <entry key="W1" value="6012.2657083528275" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="2.7755675452023816E-156" />
-      <entry key="S2" value="1.2907375662554682E-39" />
-      <entry key="S5" value="2.781859424652873E-16" />
-      <entry key="S10" value="1.667890711245291E-8" />
-      <entry key="S30" value="0.0025555834274514004" />
-      <entry key="S60" value="0.05223691883699355" />
-      <entry key="M2" value="0.3280450559366287" />
-      <entry key="M5" value="2.111259234430114" />
-      <entry key="M10" value="5.619727115030527" />
-      <entry key="M15" value="8.791240105983661" />
-      <entry key="M30" value="16.603495115027727" />
-      <entry key="H1" value="33.93415293131451" />
-      <entry key="H2" value="89.01426094633128" />
-      <entry key="H4" value="202.44518880887895" />
-      <entry key="D1" value="490.16294957718986" />
-      <entry key="W1" value="580.1938391091816" />
+      <entry key="MS500" value="3.0868505926053796E-165" />
+      <entry key="S2" value="7.453820025726187E-42" />
+      <entry key="S5" value="3.539578601877128E-17" />
+      <entry key="S10" value="5.9494357731444804E-9" />
+      <entry key="S30" value="0.0018120016695528935" />
+      <entry key="S60" value="0.04256765809317143" />
+      <entry key="M2" value="0.2065317456503205" />
+      <entry key="M5" value="0.5658442808318177" />
+      <entry key="M10" value="0.9176690514849122" />
+      <entry key="M15" value="1.2165890464020688" />
+      <entry key="M30" value="3.4303168695144453" />
+      <entry key="H1" value="14.151794979075131" />
+      <entry key="H2" value="52.84993469854242" />
+      <entry key="H4" value="152.88675526446784" />
+      <entry key="D1" value="485.6857560334809" />
+      <entry key="W1" value="605.8817117136372" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.7834599051567224" />
-      <entry key="MS500" value="2.857041561112361" />
-      <entry key="S2" value="8.529906624060327" />
-      <entry key="S5" value="12.094903330415281" />
-      <entry key="S10" value="13.834124361159901" />
-      <entry key="S30" value="15.258042886551777" />
-      <entry key="S60" value="16.447320878905607" />
-      <entry key="M2" value="20.530177326937583" />
-      <entry key="M5" value="37.9623364266039" />
-      <entry key="M10" value="65.79431522462254" />
-      <entry key="M15" value="90.56629553318948" />
-      <entry key="M30" value="165.58878535644828" />
-      <entry key="H1" value="351.57769223880814" />
-      <entry key="H2" value="912.5471173318804" />
-      <entry key="H4" value="2080.2287994665226" />
-      <entry key="D1" value="5145.352388485169" />
-      <entry key="W1" value="6123.6397386287335" />
+      <entry key="MS100" value="0.013415204982795631" />
+      <entry key="MS500" value="0.46349226888871176" />
+      <entry key="S2" value="1.256864264668825" />
+      <entry key="S5" value="1.6444725414504127" />
+      <entry key="S10" value="1.8105201463685574" />
+      <entry key="S30" value="1.986127096930282" />
+      <entry key="S60" value="2.4497092819611663" />
+      <entry key="M2" value="3.849425602708471" />
+      <entry key="M5" value="8.31990848356665" />
+      <entry key="M10" value="15.54267890186673" />
+      <entry key="M15" value="22.059775840383942" />
+      <entry key="M30" value="59.327063194187744" />
+      <entry key="H1" value="209.82436407412683" />
+      <entry key="H2" value="660.8498711366292" />
+      <entry key="H4" value="1736.6649221388277" />
+      <entry key="D1" value="5312.562165650612" />
+      <entry key="W1" value="6618.143771141922" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -150,26 +135,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;copilot.chat.legacySessionMetadata.migrated&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;MechanicsRework&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "copilot.chat.legacySessionMetadata.migrated": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.4.1f1\Editor\Unity.exe" />
@@ -227,6 +212,7 @@
       <workItem from="1783849825979" duration="702000" />
       <workItem from="1783960287631" duration="8112000" />
       <workItem from="1784030482678" duration="4744000" />
+      <workItem from="1784370515941" duration="5399000" />
     </task>
     <servers />
   </component>

@@ -32063,11 +32063,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 592e716fd5256fd46893854b8e476225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
+  cam: {fileID: 0}
   target: {fileID: 49443030}
   zOffset: -20
   xyOffset: {x: 0, y: 3.75}
   smoothTime: 0.18
   lookAheadX: 2
+  zoomedOutZOffset: -50
+  zoomBlendDuration: 0.25
+  zoomedOutOrthoSize: 18
+  zoomToggleAction: {fileID: -8169407667109031227, guid: 052faaac586de48259a63d0c4782560b, type: 3}
 --- !u!1001 &331198756
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -18,6 +18,8 @@ GameObject:
   - component: {fileID: 1824054846773137040}
   - component: {fileID: 6716827824686687911}
   - component: {fileID: 4218100133004820406}
+  - component: {fileID: 9168581481534493764}
+  - component: {fileID: 4244480023189526010}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -94,10 +96,10 @@ MonoBehaviour:
           m_StringArgument: Dead
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6556934212776570207}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
+      - m_Target: {fileID: 4244480023189526010}
+        m_TargetAssemblyTypeName: PlayerAnimatorBridge, Assembly-CSharp
+        m_MethodName: PlayDeath
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -121,16 +123,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6556934212776570207}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
+      - m_Target: {fileID: 4244480023189526010}
+        m_TargetAssemblyTypeName: PlayerAnimatorBridge, Assembly-CSharp
+        m_MethodName: PlayDeath
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Dead
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   onWin:
@@ -227,6 +229,7 @@ MonoBehaviour:
   jump: {fileID: 5986396149936150185}
   dash: {fileID: 1824054846773137040}
   detector: {fileID: 6716827824686687911}
+  godMode: {fileID: 9168581481534493764}
 --- !u!114 &4698785292282006936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,94 +290,46 @@ MonoBehaviour:
   onFirstJump:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6556934212776570207}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
+      - m_Target: {fileID: 4244480023189526010}
+        m_TargetAssemblyTypeName: PlayerAnimatorBridge, Assembly-CSharp
+        m_MethodName: PlayJumpStart
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: JumpStart
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6556934212776570207}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: ResetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: JumpEnd
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   onSecondJump:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6556934212776570207}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: ResetTrigger
-        m_Mode: 5
+      - m_Target: {fileID: 4244480023189526010}
+        m_TargetAssemblyTypeName: PlayerAnimatorBridge, Assembly-CSharp
+        m_MethodName: PlayJumpStart
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: JumpStart
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6556934212776570207}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: JumpStart
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6556934212776570207}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: ResetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: JumpEnd
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   onLand:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6556934212776570207}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
+      - m_Target: {fileID: 4244480023189526010}
+        m_TargetAssemblyTypeName: PlayerAnimatorBridge, Assembly-CSharp
+        m_MethodName: PlayJumpEnd
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: JumpEnd
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6556934212776570207}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: ResetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: JumpStart
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1824054846773137040
@@ -395,55 +350,31 @@ MonoBehaviour:
   onDashStarted:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6556934212776570207}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
+      - m_Target: {fileID: 4244480023189526010}
+        m_TargetAssemblyTypeName: PlayerAnimatorBridge, Assembly-CSharp
+        m_MethodName: PlayDashStart
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: StartDash
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6556934212776570207}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: ResetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: EndDash
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   onDashEnded:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6556934212776570207}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
+      - m_Target: {fileID: 4244480023189526010}
+        m_TargetAssemblyTypeName: PlayerAnimatorBridge, Assembly-CSharp
+        m_MethodName: PlayDashEnd
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: EndDash
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6556934212776570207}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: StartDash
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &6716827824686687911
@@ -462,6 +393,7 @@ MonoBehaviour:
   controller: {fileID: 3551497791438625120}
   jump: {fileID: 5986396149936150185}
   health: {fileID: 1912221162792064668}
+  godMode: {fileID: 9168581481534493764}
   platformMask:
     serializedVersion: 2
     m_Bits: 183
@@ -483,6 +415,53 @@ MonoBehaviour:
   deathSparks: {fileID: 7405287924851500836}
   winConfetti: {fileID: 8542494136337078001}
   offset: {x: 0, y: 1, z: 0}
+--- !u!114 &9168581481534493764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640833604635590198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c631bfa04c3bb8e43b5726ace74fff74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerGodMode
+  toggleAction: {fileID: -7223397960423419603, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  speedMultiplier: 1.6
+  flightSpeed: 10
+  onGodModeChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onGodModeEnabled:
+    m_PersistentCalls:
+      m_Calls: []
+  onGodModeDisabled:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &4244480023189526010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640833604635590198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b59ff322cfa7df4e8204de6497046ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimatorBridge
+  animator: {fileID: 6556934212776570207}
+  godMode: {fileID: 9168581481534493764}
+  movement: {fileID: 0}
+  moveSpeedFloat: MoveSpeed
+  godModeBool: GodMode
+  jumpStartTrigger: JumpStart
+  jumpEndTrigger: JumpEnd
+  dashStartTrigger: StartDash
+  dashEndTrigger: EndDash
+  deathTrigger: Dead
+  driveMoveSpeed: 1
 --- !u!1 &3863692050309610666
 GameObject:
   m_ObjectHideFlags: 0

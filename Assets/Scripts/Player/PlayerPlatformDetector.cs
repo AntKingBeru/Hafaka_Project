@@ -7,6 +7,7 @@ public class PlayerPlatformDetector : MonoBehaviour
     [SerializeField] private CharacterController controller;
     [SerializeField] private PlayerJump jump;
     [SerializeField] private PlayerHealth health;
+    [SerializeField] private PlayerGodMode godMode;
     [SerializeField] private LayerMask platformMask = Physics.DefaultRaycastLayers;
     [SerializeField] private LayerMask pitMask;
 
@@ -60,7 +61,9 @@ public class PlayerPlatformDetector : MonoBehaviour
     private void NotifyContact(Collider other)
     {
         other.GetComponent<BouncyPlatform>()?.OnPlayerLanded(jump);
-        other.GetComponent<SpikeTrap>()?.OnPlayerLanded(health);
+        
+        if (godMode || !godMode.IsActive)
+            other.GetComponent<SpikeTrap>()?.OnPlayerLanded(health);
 
         var platform = other.gameObject;
         if (platform == _lastPlatform)
