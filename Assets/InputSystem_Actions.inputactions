@@ -70,36 +70,27 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Map",
+                    "name": "Close",
                     "type": "Button",
-                    "id": "f75829df-b57a-4206-90e3-a47589bdc93f",
+                    "id": "ae610bd5-e5ab-44e6-bc3f-652cd01e2985",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Form1",
+                    "name": "ZoomToggle",
                     "type": "Button",
-                    "id": "43eacfa3-dd0f-4ea7-9c7e-5b5800fd0bdf",
+                    "id": "029f3b17-733c-494a-8977-a4bb83f50cc4",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Form2",
+                    "name": "GodeMode",
                     "type": "Button",
-                    "id": "ce4a36fc-f274-4aa4-92ee-e36373288515",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Form3",
-                    "type": "Button",
-                    "id": "1426edc1-da15-47b8-8153-84e68d1cdc8c",
+                    "id": "856e0d28-ce55-47cb-ab65-8cfe481354af",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -307,28 +298,6 @@
                 },
                 {
                     "name": "",
-                    "id": "8488ff95-75fc-40ea-b457-d17ce977d129",
-                    "path": "<Keyboard>/tab",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "Map",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "a3a0d54c-dd1a-4c9e-9e29-7ab7043911bc",
-                    "path": "<Gamepad>/select",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Map",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "eb40bb66-4559-4dfa-9a2f-820438abb426",
                     "path": "<Keyboard>/space",
                     "interactions": "",
@@ -384,69 +353,58 @@
                 },
                 {
                     "name": "",
-                    "id": "8c9de1c9-f098-469b-9550-452f5d8a82b9",
-                    "path": "<Keyboard>/1",
+                    "id": "e57af4fe-594d-4ce1-8818-c8d6b9c79897",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Form1",
+                    "action": "Close",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "301ee37c-3127-4115-9fc6-554af8a77d7a",
-                    "path": "<Keyboard>/numpad1",
+                    "id": "d2c05b32-db02-4f8f-96ae-9a9ee6060450",
+                    "path": "<Keyboard>/tab",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Form1",
+                    "action": "ZoomToggle",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "8338e171-03ac-4fab-83ea-4ab7e63b5198",
-                    "path": "<Keyboard>/2",
+                    "name": "One Modifier",
+                    "id": "c5c8f9e9-1403-466e-8880-d32084a8218f",
+                    "path": "OneModifier",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Form2",
-                    "isComposite": false,
+                    "action": "GodeMode",
+                    "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "1ed34376-cadd-45ac-b291-93bb44efbae6",
-                    "path": "<Keyboard>/numpad2",
+                    "name": "Modifier",
+                    "id": "b8004c9c-f6c1-4362-ab44-3749886e4d90",
+                    "path": "<Keyboard>/leftCtrl",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Form2",
+                    "action": "GodeMode",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "b7a8e30c-e2a7-4b44-952f-d00edef15697",
-                    "path": "<Keyboard>/3",
+                    "name": "Binding",
+                    "id": "4f5a6734-3390-4356-93ec-b02aa538b738",
+                    "path": "<Keyboard>/g",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Form3",
+                    "action": "GodeMode",
                     "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c5c320cd-2579-4b6d-9a6f-813ab7facbc1",
-                    "path": "<Keyboard>/numpad3",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Form3",
-                    "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
                 }
             ]
         },
@@ -476,7 +434,7 @@
                     "name": "Cancel",
                     "type": "Button",
                     "id": "15cef263-9014-4fd5-94d9-4e4a6234a6ef",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false

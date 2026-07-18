@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerMovement))]
 [RequireComponent(typeof(PlayerJump))]
 [RequireComponent(typeof(PlayerDash))]
+[RequireComponent(typeof(PlayerPlatformDetector))]
+[RequireComponent(typeof(PlayerGodMode))]
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private CharacterController controller;
@@ -12,12 +14,28 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PlayerMovement movement;
     [SerializeField] private PlayerJump jump;
     [SerializeField] private PlayerDash dash;
+    [SerializeField] private PlayerPlatformDetector detector;
+    [SerializeField] private PlayerGodMode godMode;
+
+    private bool _isFlying;
 
     private void Awake()
     {
         input.onMove.AddListener(movement.SetMoveInput);
         input.onJump.AddListener(jump.TryJump);
         input.onDash.AddListener(() => dash.TryDash(movement.LastDirection));
+    }
+    
+    private void OnEnable()
+    {
+        if (godMode)
+            godMode.onGodModeChanged.AddListener(HandleGodModeChanged);
+    }
+
+    private void OnDisable()
+    {
+        if (godMode)
+            godMode.onGodModeChanged.RemoveListener(HandleGodModeChanged);
     }
 
     private void OnDestroy()
@@ -28,17 +46,52 @@ public class PlayerController : MonoBehaviour
             input.onJump.RemoveListener(jump.TryJump);
         }
     }
+    
+    private void HandleGodModeChanged(bool active)
+    {
+        _isFlying = active;
+
+        jump.ResetVerticalVelocity();
+
+        if (!active)
+            jump.RefillJumps();
+    }
 
     private void Update()
     {
-        jump.SetGrounded(controller.isGrounded);
+        var grounded = controller.isGrounded || detector.IsGrounded;
+        jump.SetGrounded(grounded);
+        
+        var mover = detector.CurrentMover;
 
         var horizontal = dash.IsDashing
             ? dash.DashVelocity
             : movement.HorizontalVelocity;
-
-        var motion = new Vector3(horizontal, jump.VerticalVelocity, 0f) * Time.deltaTime;
         
+        float vertical;
+
+        if (_isFlying)
+        {
+            horizontal *= godMode.SpeedMultiplier;
+            
+            jump.ResetVerticalVelocity();
+            vertical = movement.VerticalInput * godMode.FlightSpeed;
+        }
+        else
+            vertical = jump.VerticalVelocity;
+
+        var motion = new Vector3(horizontal, vertical, 0f) * Time.unscaledDeltaTime;
+
+        if (mover && !_isFlying)
+            motion.x += mover.DeltaMovement.x;
+                
         controller.Move(motion);
+
+        if (mover && mover.DeltaMovement.y != 0f && !_isFlying)
+        {
+            controller.enabled = false;
+            transform.position += new Vector3(0f, mover.DeltaMovement.y, 0f);
+            controller.enabled = true;
+        }
     }
 }

@@ -65,6 +65,16 @@ public class PlayerJump : MonoBehaviour
         VerticalVelocity = force;
     }
 
+    public void ResetVerticalVelocity()
+    {
+        VerticalVelocity = 0f;
+    }
+
+    public void RefillJumps()
+    {
+        _jumpsRemaining = 2;
+    }
+
     private void ApplyGravity()
     {
         float gravity;
@@ -76,6 +86,6 @@ public class PlayerJump : MonoBehaviour
         else
             gravity = fallGravity;
         
-        VerticalVelocity -= gravity * Time.deltaTime;
+        VerticalVelocity -= gravity * Time.unscaledDeltaTime;
     }
 }
