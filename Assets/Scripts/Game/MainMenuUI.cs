@@ -55,7 +55,7 @@ public class MainMenuUI : MonoBehaviour
 
     private bool TryCloseInfoPanel()
     {
-        if (infoPanel.activeSelf)
+        if (!infoPanel.activeSelf)
             return false;
 
         infoPanel.SetActive(false);

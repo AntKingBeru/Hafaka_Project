@@ -11,6 +11,7 @@ public class PersistentManager : MonoBehaviour
     {
         if (_instance && _instance != this)
         {
+            gameObject.SetActive(false);
             Destroy(gameObject);
             return;
         }

@@ -88,7 +88,10 @@ public class PlayerController : MonoBehaviour
         if (mover && !_isFlying)
             motion.x += mover.DeltaMovement.x;
                 
-        controller.Move(motion);
+        var flags = controller.Move(motion);
+        
+        if ((flags & CollisionFlags.Above) != 0)
+            jump.OnHeadBump();
 
         if (mover && mover.DeltaMovement.y != 0f && !_isFlying)
         {

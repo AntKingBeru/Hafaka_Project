@@ -10,20 +10,33 @@ public class PlayerJump : MonoBehaviour
     [SerializeField] private float apexGravityBoost = 6f;
     [SerializeField] private float apexThreshold = 2f;
     
+    [Header("Head Bump")]
+    [SerializeField] private float headBumpVelocity = -1f;
+    
     [Header("Events")]
     public UnityEvent onFirstJump;
     public UnityEvent onSecondJump;
     public UnityEvent onLand;
 
+    private const int MaxJumps = 2;
+
     private int _jumpsRemaining;
     private bool _wasGrounded;
+    private int _bouncedFrame = -1;
     
     public float VerticalVelocity { get; private set; }
     public bool IsGrounded { get; private set; }
+    
+    private bool BouncedThisFrame => _bouncedFrame == Time.frameCount;
+
+    private void Awake()
+    {
+        _jumpsRemaining = MaxJumps;
+    }
 
     private void Update()
     {
-        if (IsGrounded && VerticalVelocity < 0f)
+        if (IsGrounded && VerticalVelocity < 0f && !BouncedThisFrame)
         {
             VerticalVelocity = -2f;
             return;
@@ -34,9 +47,11 @@ public class PlayerJump : MonoBehaviour
     
     public void SetGrounded(bool grounded)
     {
-        if (grounded && !_wasGrounded)
+        var justLanded = grounded && !_wasGrounded;
+        
+        if (justLanded && !BouncedThisFrame)
         {
-            _jumpsRemaining = 2;
+            _jumpsRemaining = MaxJumps;
             VerticalVelocity = 0f;
             onLand.Invoke();
         }
@@ -63,6 +78,11 @@ public class PlayerJump : MonoBehaviour
     public void ApplyBounce(float force)
     {
         VerticalVelocity = force;
+
+        _jumpsRemaining = MaxJumps - 1;
+        _bouncedFrame = Time.frameCount;
+
+        onFirstJump.Invoke();
     }
 
     public void ResetVerticalVelocity()
@@ -72,7 +92,15 @@ public class PlayerJump : MonoBehaviour
 
     public void RefillJumps()
     {
-        _jumpsRemaining = 2;
+        _jumpsRemaining = MaxJumps;
+    }
+    
+    public void OnHeadBump()
+    {
+        if (VerticalVelocity <= 0f)
+            return;
+
+        VerticalVelocity = headBumpVelocity;
     }
 
     private void ApplyGravity()

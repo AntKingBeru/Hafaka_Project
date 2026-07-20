@@ -77,6 +77,7 @@ public class SoundManager : MonoBehaviour
 
         musicSource.clip = clip;
         musicSource.Play();
+        musicSource.time = 0.0294f;
     }
 
     public void StopMusic() => musicSource.Stop();

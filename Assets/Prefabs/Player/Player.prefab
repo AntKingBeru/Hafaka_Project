@@ -422,6 +422,7 @@ MonoBehaviour:
   fallGravity: 28
   apexGravityBoost: 6
   apexThreshold: 2
+  headBumpVelocity: -1
   onFirstJump:
     m_PersistentCalls:
       m_Calls:
@@ -656,7 +657,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAudio
   sfxGroup: {fileID: -5169054720519909973, guid: e49b09e272d1ae64497d9b452db2daab, type: 2}
   oneShotSource: {fileID: 3768014220936423019}
-  walkSource: {fileID: 0}
   jumpClip: {fileID: 8300000, guid: c32df41bb0085104292096af024c3c46, type: 3}
   doubleJumpClip: {fileID: 8300000, guid: c32df41bb0085104292096af024c3c46, type: 3}
   landClip: {fileID: 8300000, guid: 8ce2dea282c8a2d4faebd43affbf9356, type: 3}
@@ -665,7 +665,7 @@ MonoBehaviour:
   victoryClip: {fileID: 8300000, guid: 0b3ca395ce8d9724c91ce1268a705620, type: 3}
   walkClip: {fileID: 8300000, guid: fe494bc89e0e6404dba19385fa197c2c, type: 3}
   walkSpeedThreshold: 0.1
-  walkVolume: 0
+  walkVolume: 0.5
   volume: 1
   movement: {fileID: 5299583896313630853}
   dash: {fileID: 1824054846773137040}

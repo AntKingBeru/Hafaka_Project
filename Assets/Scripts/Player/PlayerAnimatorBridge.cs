@@ -97,7 +97,7 @@ public class PlayerAnimatorBridge : MonoBehaviour
         if (!animator || string.IsNullOrEmpty(floatName))
             return;
 
-        var hash = Animator.StringToHash(name);
+        var hash = Animator.StringToHash(floatName);
         if (!_floatHashes.Contains(hash))
             return;
 
@@ -121,7 +121,7 @@ public class PlayerAnimatorBridge : MonoBehaviour
         if (!animator || string.IsNullOrEmpty(triggerName))
             return;
 
-        var hash = Animator.StringToHash(name);
+        var hash = Animator.StringToHash(triggerName);
         if (!_triggerHashes.Contains(hash))
             return;
 
