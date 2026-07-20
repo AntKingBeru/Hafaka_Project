@@ -6,17 +6,17 @@ public class MainMenuUI : MonoBehaviour
     [Header("Buttons")]
     [SerializeField] private Button startButton;
     [SerializeField] private Button infoButton;
+    [SerializeField] private Button settingsButton;
     [SerializeField] private Button quitButton;
 
     [Header("Info Panel")]
     [SerializeField] private GameObject infoPanel;
     
-    [SerializeField] private SettingsMenu settingsMenu;
-    
     private void Awake()
     {
         startButton.onClick.AddListener(OnStartClicked);
         infoButton.onClick.AddListener(OnInfoClicked);
+        settingsButton.onClick.AddListener(OnSettingsClicked);
         quitButton.onClick.AddListener(OnQuitClicked);
 
         infoPanel.SetActive(false);
@@ -24,14 +24,14 @@ public class MainMenuUI : MonoBehaviour
 
     private void OnEnable()
     {
-        if (settingsMenu)
-            settingsMenu.EscapeConsumer = TryCloseInfoPanel;
+        if (SettingsMenu.Instance)
+            SettingsMenu.Instance.EscapeConsumer = TryCloseInfoPanel;
     }
 
     private void OnDisable()
     {
-        if (settingsMenu)
-            settingsMenu.EscapeConsumer = null;
+        if (SettingsMenu.Instance)
+            SettingsMenu.Instance.EscapeConsumer = null;
     }
 
     private void OnStartClicked()
@@ -42,6 +42,11 @@ public class MainMenuUI : MonoBehaviour
     private void OnInfoClicked()
     {
         infoPanel.SetActive(true);
+    }
+
+    private void OnSettingsClicked()
+    {
+        SettingsMenu.Instance?.Open();
     }
 
     private void OnQuitClicked()

@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 
 public class SettingsMenu : MonoBehaviour
 {
+    public static SettingsMenu Instance { get; private set; }
+    
     [Header("Panel")]
     [SerializeField] private GameObject panel;
 
@@ -24,6 +26,14 @@ public class SettingsMenu : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance && Instance != this)
+        {
+            Destroy(this);
+            return;
+        }
+
+        Instance = this;
+        
         if (panel)
             panel.SetActive(false);
 

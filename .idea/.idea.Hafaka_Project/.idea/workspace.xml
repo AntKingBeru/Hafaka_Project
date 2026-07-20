@@ -12,36 +12,20 @@
   <component name="ChangeListManager">
     <list default="true" id="8abec611-85b6-4918-a764-2fc510d87e3c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hafaka_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hafaka_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Clips/Ambient/Background.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Clips/Ambient/Background.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Clips/Ambient/Exit.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Clips/Ambient/Exit.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Clips/Ambient/Menu.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Clips/Ambient/Menu.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Clips/SFX/Dash.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Clips/SFX/Dash.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Clips/SFX/Death.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Clips/SFX/Death.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Clips/SFX/Jump.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Clips/SFX/Jump.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Clips/SFX/Land.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Clips/SFX/Land.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Clips/SFX/Victory.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Clips/SFX/Victory.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Clips/SFX/Walk.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Clips/SFX/Walk.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GameManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/GameManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GameManager.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GameManager.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_Liron.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_Liron.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_Sean.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_Sean.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_Shir.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_Shir.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/main_menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/main_menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/MainMenuUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/MainMenuUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/PersistentManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/PersistentManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimatorBridge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimatorBridge.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerJump.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerJump.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sound/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sound/SoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/SettingsMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/SettingsMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Windows.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Windows.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/PC_RPAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/PC_RPAsset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,61 +74,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0000000015504757" />
-      <entry key="S5" value="1.0007088810351756" />
-      <entry key="S10" value="1.06782449719584" />
-      <entry key="S30" value="2.5966683911997928" />
-      <entry key="S60" value="4.974686408566049" />
-      <entry key="M2" value="9.74253745103705" />
-      <entry key="M5" value="22.224282848572805" />
-      <entry key="M10" value="33.453932649094405" />
-      <entry key="M15" value="41.43398859616438" />
-      <entry key="M30" value="75.09510827771308" />
-      <entry key="H1" value="172.91679074480703" />
-      <entry key="H2" value="464.1579566876474" />
-      <entry key="H4" value="1285.9708779569492" />
-      <entry key="D1" value="4818.069225712207" />
-      <entry key="W1" value="6300.1775367989985" />
+      <entry key="MS100" value="2.58223438076839" />
+      <entry key="MS500" value="5.543834177521222" />
+      <entry key="S2" value="8.541153480506114" />
+      <entry key="S5" value="13.798596061955184" />
+      <entry key="S10" value="19.253171886101093" />
+      <entry key="S30" value="27.036778621894538" />
+      <entry key="S60" value="31.562637889773715" />
+      <entry key="M2" value="37.52058707410322" />
+      <entry key="M5" value="50.82842610001437" />
+      <entry key="M10" value="62.52946515504877" />
+      <entry key="M15" value="70.71106106716734" />
+      <entry key="M30" value="104.51087498682591" />
+      <entry key="H1" value="202.30159965729786" />
+      <entry key="H2" value="493.36946300025994" />
+      <entry key="H4" value="1314.8980507130448" />
+      <entry key="D1" value="4847.404225854706" />
+      <entry key="W1" value="6330.053388458251" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.1788797823423244E-175" />
-      <entry key="MS500" value="1.0334605520320986E-35" />
-      <entry key="S2" value="1.7929718701201496E-9" />
-      <entry key="S5" value="3.172702789197856E-4" />
-      <entry key="S10" value="0.017812083181014512" />
-      <entry key="S30" value="0.262636885519108" />
-      <entry key="S60" value="0.5707422279738705" />
-      <entry key="M2" value="1.1909768816999318" />
-      <entry key="M5" value="2.910530113895408" />
-      <entry key="M10" value="4.409313510689348" />
-      <entry key="M15" value="5.288524754435935" />
-      <entry key="M30" value="8.089308355762007" />
-      <entry key="H1" value="15.601866717889077" />
-      <entry key="H2" value="40.734614228385695" />
-      <entry key="H4" value="121.38422210549203" />
-      <entry key="D1" value="479.50516918476774" />
-      <entry key="W1" value="629.2698204403072" />
+      <entry key="MS100" value="2.653097214171032E-227" />
+      <entry key="MS500" value="4.838944407487715E-46" />
+      <entry key="S2" value="4.690159996768351E-12" />
+      <entry key="S5" value="2.9408648275624456E-5" />
+      <entry key="S10" value="0.005422974359277986" />
+      <entry key="S30" value="0.17668377312434203" />
+      <entry key="S60" value="0.4681235383046354" />
+      <entry key="M2" value="1.078607827743481" />
+      <entry key="M5" value="2.797410441865322" />
+      <entry key="M10" value="4.322778933992729" />
+      <entry key="M15" value="5.219103463350067" />
+      <entry key="M30" value="8.03603968878934" />
+      <entry key="H1" value="15.550412172775388" />
+      <entry key="H2" value="40.66738791305011" />
+      <entry key="H4" value="121.28401760218138" />
+      <entry key="D1" value="479.4391733578641" />
+      <entry key="W1" value="629.2574470798842" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.757858283255199" />
-      <entry key="MS500" value="0.9460576467255959" />
-      <entry key="S2" value="0.9862327065905251" />
-      <entry key="S5" value="0.9953149952561485" />
-      <entry key="S10" value="1.0748703016935546" />
-      <entry key="S30" value="2.800600101408096" />
-      <entry key="S60" value="5.479813673364824" />
-      <entry key="M2" value="10.877456808421247" />
-      <entry key="M5" value="25.09503897721559" />
-      <entry key="M10" value="37.83649494295964" />
-      <entry key="M15" value="46.701533893652304" />
-      <entry key="M30" value="83.16737458653174" />
-      <entry key="H1" value="188.50038184561942" />
-      <entry key="H2" value="504.8677673532084" />
-      <entry key="H4" value="1407.3206465261333" />
-      <entry key="D1" value="5297.5537148801195" />
-      <entry key="W1" value="6929.443533737806" />
+      <entry key="MS100" value="2.3095844236165153" />
+      <entry key="MS500" value="4.995398401604455" />
+      <entry key="S2" value="8.14998333180166" />
+      <entry key="S5" value="13.566379150289006" />
+      <entry key="S10" value="19.112212906367944" />
+      <entry key="S30" value="27.116520476997355" />
+      <entry key="S60" value="31.946628271755912" />
+      <entry key="M2" value="38.53283471942119" />
+      <entry key="M5" value="53.581262540974436" />
+      <entry key="M10" value="66.82282631076673" />
+      <entry key="M15" value="75.90732858158522" />
+      <entry key="M30" value="112.52891681369474" />
+      <entry key="H1" value="217.83326194095605" />
+      <entry key="H2" value="534.0118208811632" />
+      <entry key="H4" value="1436.1475094859886" />
+      <entry key="D1" value="5326.822699748256" />
+      <entry key="W1" value="6959.307008926894" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -177,6 +161,16 @@
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Downloads/hafaka\Robomorph.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\kabut\Downloads\hafaka" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="MIXED_MODE_DEBUG" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.4.1f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath E:\UnityProjects\Hafaka_Project -debugCodeOptimization" />
@@ -235,6 +229,7 @@
       <workItem from="1784030482678" duration="4744000" />
       <workItem from="1784370515941" duration="5399000" />
       <workItem from="1784569709556" duration="7628000" />
+      <workItem from="1784581028843" duration="818000" />
     </task>
     <servers />
   </component>
