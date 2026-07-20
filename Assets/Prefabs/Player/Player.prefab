@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8961628124171179547}
   - component: {fileID: 3551497791438625120}
+  - component: {fileID: 3768014220936423019}
   - component: {fileID: 1912221162792064668}
   - component: {fileID: 7265477871480352089}
   - component: {fileID: 4698785292282006936}
@@ -20,6 +21,7 @@ GameObject:
   - component: {fileID: 4218100133004820406}
   - component: {fileID: 9168581481534493764}
   - component: {fileID: 4244480023189526010}
+  - component: {fileID: 168450329827947966}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -69,6 +71,103 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 1.85, z: 0}
+--- !u!82 &3768014220936423019
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640833604635590198}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &1912221162792064668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,6 +207,18 @@ MonoBehaviour:
           m_StringArgument: Dead
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 168450329827947966}
+        m_TargetAssemblyTypeName: PlayerAudio, Assembly-CSharp
+        m_MethodName: PlayDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Dead
+          m_BoolArgument: 0
+        m_CallState: 2
   onDeathSilent:
     m_PersistentCalls:
       m_Calls:
@@ -125,6 +236,18 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 4244480023189526010}
         m_TargetAssemblyTypeName: PlayerAnimatorBridge, Assembly-CSharp
+        m_MethodName: PlayDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 168450329827947966}
+        m_TargetAssemblyTypeName: PlayerAudio, Assembly-CSharp
         m_MethodName: PlayDeath
         m_Mode: 1
         m_Arguments:
@@ -201,6 +324,18 @@ MonoBehaviour:
       - m_Target: {fileID: 4218100133004820406}
         m_TargetAssemblyTypeName: PlayerVFX, Assembly-CSharp
         m_MethodName: PlayWin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 168450329827947966}
+        m_TargetAssemblyTypeName: PlayerAudio, Assembly-CSharp
+        m_MethodName: PlayVictory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -302,6 +437,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 168450329827947966}
+        m_TargetAssemblyTypeName: PlayerAudio, Assembly-CSharp
+        m_MethodName: PlayJump
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onSecondJump:
     m_PersistentCalls:
       m_Calls:
@@ -317,12 +464,36 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 168450329827947966}
+        m_TargetAssemblyTypeName: PlayerAudio, Assembly-CSharp
+        m_MethodName: PlayDoubleJump
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onLand:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4244480023189526010}
         m_TargetAssemblyTypeName: PlayerAnimatorBridge, Assembly-CSharp
         m_MethodName: PlayJumpEnd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 168450329827947966}
+        m_TargetAssemblyTypeName: PlayerAudio, Assembly-CSharp
+        m_MethodName: PlayLand
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -353,6 +524,18 @@ MonoBehaviour:
       - m_Target: {fileID: 4244480023189526010}
         m_TargetAssemblyTypeName: PlayerAnimatorBridge, Assembly-CSharp
         m_MethodName: PlayDashStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 168450329827947966}
+        m_TargetAssemblyTypeName: PlayerAudio, Assembly-CSharp
+        m_MethodName: PlayDash
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -453,15 +636,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimatorBridge
   animator: {fileID: 6556934212776570207}
   godMode: {fileID: 9168581481534493764}
-  movement: {fileID: 0}
-  moveSpeedFloat: MoveSpeed
   godModeBool: GodMode
   jumpStartTrigger: JumpStart
   jumpEndTrigger: JumpEnd
   dashStartTrigger: StartDash
   dashEndTrigger: EndDash
   deathTrigger: Dead
-  driveMoveSpeed: 1
+--- !u!114 &168450329827947966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640833604635590198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a472ef37c988fdd4a9e0d796cbc5e736, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAudio
+  sfxGroup: {fileID: -5169054720519909973, guid: e49b09e272d1ae64497d9b452db2daab, type: 2}
+  oneShotSource: {fileID: 3768014220936423019}
+  walkSource: {fileID: 0}
+  jumpClip: {fileID: 8300000, guid: c32df41bb0085104292096af024c3c46, type: 3}
+  doubleJumpClip: {fileID: 8300000, guid: c32df41bb0085104292096af024c3c46, type: 3}
+  landClip: {fileID: 8300000, guid: 8ce2dea282c8a2d4faebd43affbf9356, type: 3}
+  dashClip: {fileID: 8300000, guid: 4933f8d439dddb649aa3fa7690166a79, type: 3}
+  deathClip: {fileID: 8300000, guid: 5163764fa8e72174c910d7293b917570, type: 3}
+  victoryClip: {fileID: 8300000, guid: 0b3ca395ce8d9724c91ce1268a705620, type: 3}
+  walkClip: {fileID: 8300000, guid: fe494bc89e0e6404dba19385fa197c2c, type: 3}
+  walkSpeedThreshold: 0.1
+  walkVolume: 0
+  volume: 1
+  movement: {fileID: 5299583896313630853}
+  dash: {fileID: 1824054846773137040}
+  godMode: {fileID: 9168581481534493764}
+  detector: {fileID: 6716827824686687911}
 --- !u!1 &3863692050309610666
 GameObject:
   m_ObjectHideFlags: 0

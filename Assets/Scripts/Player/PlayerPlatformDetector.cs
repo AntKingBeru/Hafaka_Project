@@ -18,6 +18,9 @@ public class PlayerPlatformDetector : MonoBehaviour
 
     private void Update()
     {
+        if (PauseManager.IsPaused)
+            return;
+
         CheckGround();
         CheckPit();
     }

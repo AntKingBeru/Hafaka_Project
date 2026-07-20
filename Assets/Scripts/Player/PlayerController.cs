@@ -59,6 +59,9 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (PauseManager.IsPaused)
+            return;
+        
         var grounded = controller.isGrounded || detector.IsGrounded;
         jump.SetGrounded(grounded);
         

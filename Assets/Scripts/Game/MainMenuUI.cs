@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.InputSystem;
 
 public class MainMenuUI : MonoBehaviour
 {
@@ -11,9 +10,8 @@ public class MainMenuUI : MonoBehaviour
 
     [Header("Info Panel")]
     [SerializeField] private GameObject infoPanel;
-
-    [Header("Input")]
-    [SerializeField] private InputActionReference closeAction;
+    
+    [SerializeField] private SettingsMenu settingsMenu;
     
     private void Awake()
     {
@@ -26,14 +24,14 @@ public class MainMenuUI : MonoBehaviour
 
     private void OnEnable()
     {
-        closeAction.action.Enable();
-        closeAction.action.performed += OnClosePerformed;
+        if (settingsMenu)
+            settingsMenu.EscapeConsumer = TryCloseInfoPanel;
     }
 
     private void OnDisable()
     {
-        closeAction.action.performed -= OnClosePerformed;
-        closeAction.action.Disable();
+        if (settingsMenu)
+            settingsMenu.EscapeConsumer = null;
     }
 
     private void OnStartClicked()
@@ -55,9 +53,12 @@ public class MainMenuUI : MonoBehaviour
 #endif
     }
 
-    private void OnClosePerformed(InputAction.CallbackContext ctx)
+    private bool TryCloseInfoPanel()
     {
         if (infoPanel.activeSelf)
-            infoPanel.SetActive(false);
+            return false;
+
+        infoPanel.SetActive(false);
+        return true;
     }
 }

@@ -74,6 +74,7 @@ public class SceneLoader : MonoBehaviour
         yield return StartCoroutine(Fade(0f, 1f));
 
         Time.timeScale = 1f;
+        PauseManager.ClearPause();
         
         var op = SceneManager.LoadSceneAsync(buildIndex);
         op!.allowSceneActivation = false;

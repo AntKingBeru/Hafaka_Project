@@ -36,6 +36,9 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void Update()
     {
+        if (PauseManager.IsPaused)
+            return;
+        
         var moveInput = moveAction.action.ReadValue<Vector2>();
         onMove.Invoke(moveInput);
     }
